@@ -23,6 +23,13 @@
 //Instance method to define the dictionaries of moves
 - (void) defineDictionary;
 
+//Class method to get the correct values for the dictionary
++ (NSArray*) getValuesArrayForChaChaBronzeMove: (NSString*) move;
+//Add other styles/levels
+
+//Where all the enumerated arrays live
++ (NSArray*) valuesArrayForChaChaBronzeopenBasic;
+
 //Chooses the next move
 - (NSString*) chooseAMoveAfter: (NSString*) previousMove;
 
