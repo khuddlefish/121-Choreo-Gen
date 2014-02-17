@@ -50,11 +50,12 @@ int main(int argc, const char * argv[])
 
         //Generates choreography, starting with a basic
         //NSMutableArray* choreographyArray = [[NSMutableArray alloc] init];
-        NSString * previousMove = @"basic";
+        NSString * previousMove = @"closedBasic";
         for (int i = 0; i < numberOfMoves; ++i) {
             NSLog(@"%@", previousMove);
             //[choreographyArray addObject: previousMove]; //save the sequence
             previousMove = [choreography chooseAMoveAfter: previousMove];
+        }
         
         
         
