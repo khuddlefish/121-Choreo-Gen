@@ -109,98 +109,124 @@
  *                                             *
  ***********************************************/
 
+//NOTE: right now all the moves are alphabetized. Not sure if that's optimal for randomization
+
 //---------------------------------------------
 //               Cha Cha - Bronze             |
 //---------------------------------------------
 
 + (NSArray*) valuesArrayForChaChaBronze_alemana
 {
-    NSArray *valuesForAlemana = @[@""];
+    NSArray *valuesForAlemana = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandRSP", @"newYorkLSP", @"naturalOpeningOut", @"openBasic", @"shoulderToShoulderL", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForAlemana;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_closedBasic
 {
-    NSArray *valuesForClosedBasic = @[@"timeStep", @"openBasic", @"closedBasic", @"newYorkLSP", @"spotTurn", @"switchTurn", @"shoulderToShoulder", @"sideStep", @"handToHand", @"thereAndBack",@"fan", @"threeChasBack", @"threeChasForward", @"naturalTop"];
+    NSArray *valuesForClosedBasic = @[@"closedBasic", @"fan", @"handToHandLSP", @"handToHandLSP", @"handToHandRSP", @"naturalTop", @"newYorkLSP", @"openBasic", @"sideStep", @"shoulderToShoulderL", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"thereAndBack", @"threeChasBack", @"threeChasForward", @"timeStepL", @"timeStepR", @"underarmTurnL", @"underarmTurnR"];
     return valuesForClosedBasic;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_closedHipTwist
 {
-    NSArray *valuesForClosedHipTwist = @[@""];
+    NSArray *valuesForClosedHipTwist = @[@"alemana", @"hockeyStick", @"newYorkLSP", @"openBasic", @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForClosedHipTwist;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_fan
 {
-    NSArray *valuesForFan = @[@""];
+    NSArray *valuesForFan = @[@"alemana", @"hockeyStick"];
     return valuesForFan;
 }
 
-+ (NSArray*) valuesArrayForChaChaBronze_handToHand
++ (NSArray*) valuesArrayForChaChaBronze_handToHandLSP
 {
-    NSArray *valuesForHandToHand = @[@""];
-    return valuesForHandToHand;
+    NSArray *valuesForHandToHandLSP = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
+    return valuesForHandToHandLSP;
+}
+
++ (NSArray*) valuesArrayForChaChaBronze_handToHandRSP
+{
+    NSArray *valuesForHandToHandRSP = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
+    return valuesForHandToHandRSP;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_hockeyStick
 {
-    NSArray *valuesForHockeyStick = @[@""];
+    NSArray *valuesForHockeyStick = @[@"alemana", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL",   @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForHockeyStick;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_naturalOpeningOut
 {
-    NSArray *valuesForNaturalOpeningOut = @[@""];
+    NSArray *valuesForNaturalOpeningOut = @[@"closedBasic", @"fan", @"openBasic", @"underarmTurnR"];
     return valuesForNaturalOpeningOut;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_naturalTop
 {
-    NSArray *valuesForNaturalTop = @[@""];
+    NSArray *valuesForNaturalTop = @[@"closedBasic", @"closedHipTwist", @"fan", @"hockeyStick", @"naturalOpeningOut", @"openBasic"];
     return valuesForNaturalTop;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_newYorkLSP
 {
-    NSArray *valuesForNewYorkLSP = @[@"newYorkRSP", @"spotTurn", @"switchTurn", @"closedBasic", @"openBasic", @"handToHand", @"sideStep", @"timeStep", @"fan", @"closedHipTwist", @"threeChasForward"];
+    NSArray *valuesForNewYorkLSP = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandLSP", @"newYorkRSP",  @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
     return valuesForNewYorkLSP;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_newYorkRSP
 {
-    NSArray *valuesForNewYorkRSP = @[@"newYorkLSP", @"spotTurn", @"switchTurn", @"closedBasic", @"openBasic", @"handToHand", @"sideStep", @"thereAndBack", @"timeStep", @"fan", @"threeChasForward"];
+    NSArray *valuesForNewYorkRSP = @[@"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForNewYorkRSP;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_openBasic
 {
-    NSArray *valuesForOpenBasic = @[@"openBasic", @"closedBasic", @"fan", @"threeChasBack", @"threeChasForward", @"naturalTop", @"alemana"];
+    NSArray *valuesForOpenBasic = @[@"alemana", @"closedBasic", @"fan", @"naturalTop", @"openBasic", @"threeChasBack", @"threeChasForward"];
     return valuesForOpenBasic;
 }
 
-+ (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulder
++ (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulderL
 {
-    NSArray *valuesForShoulderToShoulder = @[@""];
-    return valuesForShoulderToShoulder;
+    NSArray *valuesForShoulderToShoulderL = @[@"alemana", @"closedBasic", @"closedHipTwist",                                              @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"shoulderToShoulderR", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR" ];
+    return valuesForShoulderToShoulderL;
+}
+
++ (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulderR
+{
+    NSArray *valuesForShoulderToShoulderR = @[@"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL" ];
+    return valuesForShoulderToShoulderR;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_sideStep
 {
-    NSArray *valuesForSideStep = @[@""];
+    NSArray *valuesForSideStep = @[@"alemana", @"closedBasic", @"closedHipTwist", @"fan", @"handToHand", @"hockeyStick", @"naturalOpeningOut", @"naturalTop", @"newYorkRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulder", @"sideStep", @"spotTurn", @"switchTurn", @"threeChasBack", @"threeChasForward", @"timeStep"];
     return valuesForSideStep;
 }
 
-+ (NSArray*) valuesArrayForChaChaBronze_spotTurn
++ (NSArray*) valuesArrayForChaChaBronze_spotTurnL
 {
-    NSArray *valuesForSpotTurn = @[@""];
-    return valuesForSpotTurn;
+    NSArray *valuesForSpotTurnL = @[@""];
+    return valuesForSpotTurnL;
 }
 
-+ (NSArray*) valuesArrayForChaChaBronze_switchTurn
++ (NSArray*) valuesArrayForChaChaBronze_spotTurnR
 {
-    NSArray *valuesForSwitchTurn = @[@""];
-    return valuesForSwitchTurn;
+    NSArray *valuesForSpotTurnR = @[@""];
+    return valuesForSpotTurnR;
+}
+
++ (NSArray*) valuesArrayForChaChaBronze_switchTurnL
+{
+    NSArray *valuesForSwitchTurnL = @[@""];
+    return valuesForSwitchTurnL;
+}
+
++ (NSArray*) valuesArrayForChaChaBronze_switchTurnR
+{
+    NSArray *valuesForSwitchTurnR = @[@""];
+    return valuesForSwitchTurnR;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_thereAndBack
@@ -221,10 +247,28 @@
     return valuesForThreeChasForward;
 }
 
-+ (NSArray*) valuesArrayForChaChaBronze_timeStep
++ (NSArray*) valuesArrayForChaChaBronze_timeStepL
 {
-    NSArray *valuesForTimeStep = @[@""];
-    return valuesForTimeStep;
+    NSArray *valuesForTimeStepL = ;
+    return valuesForTimeStepL;
+}
+
++ (NSArray*) valuesArrayForChaChaBronze_timeStepR
+{
+    NSArray *valuesForTimeStepR = ;
+    return valuesForTimeStepR;
+}
+
++ (NSArray*) valuesArrayForChaChaBronze_underarmTurnL
+{
+    NSArray *valuesForUnderarmTurnL = ;
+    return valuesForUnderarmTurnL;
+}
+
++ (NSArray*) valuesArrayForChaChaBronze_underarmTurnR
+{
+    NSArray *valuesForUnderarmTurnR = ;
+    return valuesForUnderarmTurnR;
 }
 
 /*
