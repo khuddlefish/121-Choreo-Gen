@@ -18,6 +18,7 @@
  */
 + (void) danceStyleMenu {
     NSLog(@"Dance styles: ChaCha");
+//    NSLog(@"Dance styles: Waltz");
 }
 
 
@@ -28,6 +29,8 @@
  */
 + (void) difficultyLevelMenu {
     NSLog(@"Difficulty Level: Bronze");
+//    NSLog(@"Difficulty Level: Silver");
+//    NSLog(@"Difficulty Level: Gold");
 }
 
 
