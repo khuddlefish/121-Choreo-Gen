@@ -49,15 +49,13 @@ int main(int argc, const char * argv[])
 //        [choreography setMovesDictionary];                    //sets the dictionary property
 
         //Generates choreography, starting with a basic
-        //NSMutableArray* choreographyArray = [[NSMutableArray alloc] init];
+        NSMutableArray* choreographyArray = [[NSMutableArray alloc] init];
         NSString * previousMove = @"closedBasic";
         for (int i = 0; i < numberOfMoves; ++i) {
             NSLog(@"%@", previousMove);
-            //[choreographyArray addObject: previousMove]; //save the sequence
+            [choreographyArray addObject: previousMove]; //save the sequence
             previousMove = [choreography chooseAMoveAfter: previousMove];
         }
-        
-        
         
         
     }
