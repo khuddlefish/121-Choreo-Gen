@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "choreographyDictionary.h"
 
 @interface ChoreographyGeneratorViewController : UITableViewController
 

@@ -19,6 +19,9 @@
 		E190D7F118B6887800A83A01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190D7D918B6887800A83A01 /* UIKit.framework */; };
 		E190D7F918B6887800A83A01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E190D7F718B6887800A83A01 /* InfoPlist.strings */; };
 		E190D7FB18B6887800A83A01 /* ChoreographyGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E190D7FA18B6887800A83A01 /* ChoreographyGeneratorTests.m */; };
+		E1F45E8B18B85DCE00768853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F45E8A18B85DCE00768853 /* Main.storyboard */; };
+		E1F45E9018B8609D00768853 /* choreographyDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F45E8D18B8609D00768853 /* choreographyDictionary.m */; };
+		E1F45E9118B8609D00768853 /* ChoreographyGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F45E8F18B8609D00768853 /* ChoreographyGeneratorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		E190D7F618B6887800A83A01 /* ChoreographyGeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChoreographyGeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		E190D7F818B6887800A83A01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E190D7FA18B6887800A83A01 /* ChoreographyGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoreographyGeneratorTests.m; sourceTree = "<group>"; };
+		E1F45E8A18B85DCE00768853 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		E1F45E8C18B8609D00768853 /* choreographyDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = choreographyDictionary.h; path = ../choreographyDictionary.h; sourceTree = "<group>"; };
+		E1F45E8D18B8609D00768853 /* choreographyDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = choreographyDictionary.m; path = ../choreographyDictionary.m; sourceTree = "<group>"; };
+		E1F45E8E18B8609D00768853 /* ChoreographyGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoreographyGeneratorViewController.h; sourceTree = SOURCE_ROOT; };
+		E1F45E8F18B8609D00768853 /* ChoreographyGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoreographyGeneratorViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,11 @@
 		E190D7DB18B6887800A83A01 /* ChoreographyGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				E1F45E8C18B8609D00768853 /* choreographyDictionary.h */,
+				E1F45E8D18B8609D00768853 /* choreographyDictionary.m */,
+				E1F45E8E18B8609D00768853 /* ChoreographyGeneratorViewController.h */,
+				E1F45E8F18B8609D00768853 /* ChoreographyGeneratorViewController.m */,
+				E1F45E8A18B85DCE00768853 /* Main.storyboard */,
 				E190D7E418B6887800A83A01 /* AppDelegate.h */,
 				E190D7E518B6887800A83A01 /* AppDelegate.m */,
 				E190D7E718B6887800A83A01 /* Images.xcassets */,
@@ -219,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F45E8B18B85DCE00768853 /* Main.storyboard in Resources */,
 				E190D7E018B6887800A83A01 /* InfoPlist.strings in Resources */,
 				E190D7E818B6887800A83A01 /* Images.xcassets in Resources */,
 			);
@@ -240,7 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E190D7E618B6887800A83A01 /* AppDelegate.m in Sources */,
+				E1F45E9118B8609D00768853 /* ChoreographyGeneratorViewController.m in Sources */,
 				E190D7E218B6887800A83A01 /* main.m in Sources */,
+				E1F45E9018B8609D00768853 /* choreographyDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +457,7 @@
 				E190D80018B6887800A83A01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E190D80118B6887800A83A01 /* Build configuration list for PBXNativeTarget "ChoreographyGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +466,7 @@
 				E190D80318B6887800A83A01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
