@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Choreography Generator View Controller-->
+        <!--Choreo Table View Controller-->
         <scene sceneID="Ldv-I1-JM8">
             <objects>
-                <tableViewController id="GIB-RY-Kfw" customClass="ChoreographyGeneratorViewController" sceneMemberID="viewController">
+                <tableViewController id="GIB-RY-Kfw" customClass="ChoreoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RTF-NO-Zyl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

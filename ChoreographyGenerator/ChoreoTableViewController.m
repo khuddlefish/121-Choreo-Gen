@@ -1,21 +1,24 @@
 //
-//  ChoreographyGeneratorViewController.m
+//  ChoreoTableViewController.m
 //  ChoreographyGenerator
 //
 //  Created by Noelle Fa-Kaji on 2/20/14.
 //  Copyright (c) 2014 Noelle Fa-Kaji. All rights reserved.
 //
 
-#import "ChoreographyGeneratorViewController.h"
+#import "ChoreoTableViewController.h"
 #import "choreographyDictionary.h"
 
-@interface ChoreographyGeneratorViewController ()
+@interface ChoreoTableViewController ()
 
 @property NSMutableArray *choreographyItems;
+@property NSString *danceStyle;
+@property NSString *difficultyLevel;
+@property int numberOfMoves;
 
 @end
 
-@implementation ChoreographyGeneratorViewController
+@implementation ChoreoTableViewController
 
 //FOR TESTING
 - (void) loadChoreographyData
@@ -26,18 +29,18 @@
 //    [self.choreographyItems addObject:@"openBasic"];
     
     //For testing -- For the app these should come from actual button presses
-    NSString *danceStyle = @"ChaCha";
-    NSString *difficultyLevel = @"Bronze";
-    int numberOfMoves = 20;
+    self.danceStyle = @"ChaCha";
+    self.difficultyLevel = @"Bronze";
+    self.numberOfMoves = 20;
     
     choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
-    [choreography setDanceStyle: danceStyle];            //sets dance style property
-    [choreography setDifficultyLevel: difficultyLevel];  //sets difficulty level property
+    [choreography setDanceStyle: self.danceStyle];            //sets dance style property
+    [choreography setDifficultyLevel: self.difficultyLevel];  //sets difficulty level property
     [choreography setMovesDictionary];                     //sets the dictionary property
     
     //Generates choreography, starting with a basic
     NSString * previousMove = @"closedBasic";
-    for (int i = 0; i < numberOfMoves; ++i) {
+    for (int i = 0; i < self.numberOfMoves; ++i) {
         [self.choreographyItems addObject: previousMove]; //save the sequence
         previousMove = [choreography chooseAMoveAfter: previousMove];
     }
