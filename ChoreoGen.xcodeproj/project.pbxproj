@@ -21,6 +21,9 @@
 		9C91F63018B85C2B00C0CBA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91F61118B85C2B00C0CBA0 /* Foundation.framework */; };
 		9C91F63818B85C2B00C0CBA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F63618B85C2B00C0CBA0 /* InfoPlist.strings */; };
 		9C91F63B18B85C2B00C0CBA0 /* ChoreoGenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91F63A18B85C2B00C0CBA0 /* ChoreoGenTests.m */; };
+		9C91F64618B85CBE00C0CBA0 /* choreographyDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91F64518B85CBE00C0CBA0 /* choreographyDictionary.m */; };
+		9C91F65B18B868AD00C0CBA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F65A18B868AD00C0CBA0 /* Main.storyboard */; };
+		9C91F65E18B868D800C0CBA0 /* LatButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91F65D18B868D800C0CBA0 /* LatButtonsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		9C91F63718B85C2B00C0CBA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C91F63918B85C2B00C0CBA0 /* ChoreoGenTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoreoGenTests.h; sourceTree = "<group>"; };
 		9C91F63A18B85C2B00C0CBA0 /* ChoreoGenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoreoGenTests.m; sourceTree = "<group>"; };
+		9C91F64418B85CBE00C0CBA0 /* choreographyDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = choreographyDictionary.h; sourceTree = "<group>"; };
+		9C91F64518B85CBE00C0CBA0 /* choreographyDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = choreographyDictionary.m; sourceTree = "<group>"; };
+		9C91F65A18B868AD00C0CBA0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ChoreoGen/Main.storyboard; sourceTree = "<group>"; };
+		9C91F65C18B868D800C0CBA0 /* LatButtonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatButtonsViewController.h; sourceTree = "<group>"; };
+		9C91F65D18B868D800C0CBA0 /* LatButtonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatButtonsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,9 @@
 		9C91F60318B85C2B00C0CBA0 = {
 			isa = PBXGroup;
 			children = (
+				9C91F65A18B868AD00C0CBA0 /* Main.storyboard */,
+				9C91F65C18B868D800C0CBA0 /* LatButtonsViewController.h */,
+				9C91F65D18B868D800C0CBA0 /* LatButtonsViewController.m */,
 				9C91F61518B85C2B00C0CBA0 /* ChoreoGen */,
 				9C91F63318B85C2B00C0CBA0 /* ChoreoGenTests */,
 				9C91F60E18B85C2B00C0CBA0 /* Frameworks */,
@@ -112,6 +123,8 @@
 		9C91F61518B85C2B00C0CBA0 /* ChoreoGen */ = {
 			isa = PBXGroup;
 			children = (
+				9C91F64418B85CBE00C0CBA0 /* choreographyDictionary.h */,
+				9C91F64518B85CBE00C0CBA0 /* choreographyDictionary.m */,
 				9C91F61E18B85C2B00C0CBA0 /* XYZAppDelegate.h */,
 				9C91F61F18B85C2B00C0CBA0 /* XYZAppDelegate.m */,
 				9C91F61618B85C2B00C0CBA0 /* Supporting Files */,
@@ -228,6 +241,7 @@
 				9C91F62218B85C2B00C0CBA0 /* Default.png in Resources */,
 				9C91F62418B85C2B00C0CBA0 /* Default@2x.png in Resources */,
 				9C91F62618B85C2B00C0CBA0 /* Default-568h@2x.png in Resources */,
+				9C91F65B18B868AD00C0CBA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +278,8 @@
 			files = (
 				9C91F61C18B85C2B00C0CBA0 /* main.m in Sources */,
 				9C91F62018B85C2B00C0CBA0 /* XYZAppDelegate.m in Sources */,
+				9C91F64618B85CBE00C0CBA0 /* choreographyDictionary.m in Sources */,
+				9C91F65E18B868D800C0CBA0 /* LatButtonsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +452,7 @@
 				9C91F64018B85C2B00C0CBA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C91F64118B85C2B00C0CBA0 /* Build configuration list for PBXNativeTarget "ChoreoGenTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +461,7 @@
 				9C91F64318B85C2B00C0CBA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
