@@ -10,6 +10,7 @@
 
 @interface SelectDanceViewController ()
 
+
 @end
 
 @implementation SelectDanceViewController
@@ -26,13 +27,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    //create list of dance style names for move picker
+    self.danceNames = [[NSArray alloc] initWithObjects:@"ChaCha", @"Rumba", @"Samba", nil];
+    [_dancePicker selectRow:1 inComponent:0 animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
+    return 1;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    return 3;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    //returns user selected dance style
+    //probably want to use for generator somehow
+    return [self.danceNames objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
 }
 
 @end

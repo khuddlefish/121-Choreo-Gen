@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelectDanceViewController : UIViewController
+@interface SelectDanceViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIPickerView *dancePicker;
+@property NSArray *danceNames;
 
 @end
