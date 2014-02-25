@@ -1,5 +1,5 @@
 //
-//  ChoreographyGeneratorViewController.h
+//  ChoreoTableViewController.h
 //  ChoreographyGenerator
 //
 //  Created by Noelle Fa-Kaji on 2/20/14.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "choreographyDictionary.h"
 
-@interface ChoreographyGeneratorViewController : UITableViewController
+@interface ChoreoTableViewController : UITableViewController
 
 @end
