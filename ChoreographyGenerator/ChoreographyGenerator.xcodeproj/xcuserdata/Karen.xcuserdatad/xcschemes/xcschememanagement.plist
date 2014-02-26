@@ -4,20 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ChoreoGen.xcscheme</key>
+		<key>ChoreographyGenerator.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ChoreographyGeneratorTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9C91F60B18B85C2B00C0CBA0</key>
+		<key>E190D7D118B6887700A83A01</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C91F62B18B85C2B00C0CBA0</key>
+		<key>E190D7EC18B6887800A83A01</key>
 		<dict>
 			<key>primary</key>
 			<true/>

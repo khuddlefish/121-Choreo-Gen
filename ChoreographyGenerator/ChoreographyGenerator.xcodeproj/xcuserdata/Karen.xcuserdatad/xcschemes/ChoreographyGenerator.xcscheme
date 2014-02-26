@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C91F60B18B85C2B00C0CBA0"
-               BuildableName = "ChoreoGen.app"
-               BlueprintName = "ChoreoGen"
-               ReferencedContainer = "container:ChoreoGen.xcodeproj">
+               BlueprintIdentifier = "E190D7D118B6887700A83A01"
+               BuildableName = "ChoreographyGenerator.app"
+               BlueprintName = "ChoreographyGenerator"
+               ReferencedContainer = "container:ChoreographyGenerator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C91F62B18B85C2B00C0CBA0"
-               BuildableName = "ChoreoGenTests.octest"
-               BlueprintName = "ChoreoGenTests"
-               ReferencedContainer = "container:ChoreoGen.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C91F60B18B85C2B00C0CBA0"
-            BuildableName = "ChoreoGen.app"
-            BlueprintName = "ChoreoGen"
-            ReferencedContainer = "container:ChoreoGen.xcodeproj">
+            BlueprintIdentifier = "E190D7D118B6887700A83A01"
+            BuildableName = "ChoreographyGenerator.app"
+            BlueprintName = "ChoreographyGenerator"
+            ReferencedContainer = "container:ChoreographyGenerator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C91F60B18B85C2B00C0CBA0"
-            BuildableName = "ChoreoGen.app"
-            BlueprintName = "ChoreoGen"
-            ReferencedContainer = "container:ChoreoGen.xcodeproj">
+            BlueprintIdentifier = "E190D7D118B6887700A83A01"
+            BuildableName = "ChoreographyGenerator.app"
+            BlueprintName = "ChoreographyGenerator"
+            ReferencedContainer = "container:ChoreographyGenerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C91F60B18B85C2B00C0CBA0"
-            BuildableName = "ChoreoGen.app"
-            BlueprintName = "ChoreoGen"
-            ReferencedContainer = "container:ChoreoGen.xcodeproj">
+            BlueprintIdentifier = "E190D7D118B6887700A83A01"
+            BuildableName = "ChoreographyGenerator.app"
+            BlueprintName = "ChoreographyGenerator"
+            ReferencedContainer = "container:ChoreographyGenerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
