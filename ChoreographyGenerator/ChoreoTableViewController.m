@@ -20,6 +20,12 @@
 
 @implementation ChoreoTableViewController
 
+- (IBAction)setDanceStyle:(UIStoryboardSegue *)segue
+{
+    
+
+}
+
 //FOR TESTING
 - (void) loadChoreographyData
 {
@@ -106,6 +112,11 @@
     cell.textLabel.text = choreographyItem;
     
     return cell;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 /*

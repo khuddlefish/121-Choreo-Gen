@@ -11,4 +11,7 @@
 
 @interface ChoreoTableViewController : UITableViewController
 
+- (IBAction)setDanceStyle:(UIStoryboardSegue *)segue;
+- (IBAction)setDifficulty:(UIStoryboardSegue *)segue;
+
 @end

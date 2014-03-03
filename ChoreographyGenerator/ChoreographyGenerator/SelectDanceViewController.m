@@ -45,7 +45,7 @@
     return 1;
 }
 
-// returns the # of rows in each component..
+// returns the # of rows in each component. Change if add more dances
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
     return 3;
@@ -60,6 +60,11 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 @end
