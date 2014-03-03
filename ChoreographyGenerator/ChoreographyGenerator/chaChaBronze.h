@@ -41,7 +41,10 @@
 + (NSArray*) valuesArrayForChaChaBronze_openBasic;
 + (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulderL;
 + (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulderR;
-+ (NSArray*) valuesArrayForChaChaBronze_sideStep;
++ (NSArray*) valuesArrayForChaChaBronze_sideStepLwithLF;
++ (NSArray*) valuesArrayForChaChaBronze_sideStepLwithRF;
++ (NSArray*) valuesArrayForChaChaBronze_sideStepRwithLF;
++ (NSArray*) valuesArrayForChaChaBronze_sideStepRwithRF;
 + (NSArray*) valuesArrayForChaChaBronze_spotTurnL;
 + (NSArray*) valuesArrayForChaChaBronze_spotTurnR;
 + (NSArray*) valuesArrayForChaChaBronze_switchTurnL;

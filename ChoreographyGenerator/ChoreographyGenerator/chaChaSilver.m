@@ -44,7 +44,7 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_alemana
 {
-    NSArray *valuesForAlemana = @[@"closedBasic", @"closedHipTwist", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"naturalOpeningOut", @"openBasic", @"shoulderToShoulderL", @"ropeSpinning", @"sideStep", @"spotTurnR", @"spiral", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForAlemana = @[@"closedBasic", @"closedHipTwist", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"naturalOpeningOut", @"openBasic", @"shoulderToShoulderL", @"ropeSpinning", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"spiral", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForAlemana;
 }
 
@@ -56,7 +56,7 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_closedBasic
 {
-    NSArray *valuesForClosedBasic = @[@"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandLSP", @"handToHandLSP", @"handToHandRSP", @"naturalTop", @"newYorkLSP", @"openBasic", @"reverseTop", @"sideStep", @"shoulderToShoulderL", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"thereAndBack", @"threeChasBack", @"threeChasForward", @"timeStepL", @"timeStepR", @"underarmTurnL", @"underarmTurnR"];
+    NSArray *valuesForClosedBasic = @[@"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandLSP", @"handToHandLSP", @"handToHandRSP", @"naturalTop", @"newYorkLSP", @"openBasic", @"reverseTop", @"sideStepLwithLF", @"sideStepRwithLF", @"sideStepLwithRF", @"sideStepRwithRF", @"shoulderToShoulderL", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"thereAndBack", @"threeChasBack", @"threeChasForward", @"timeStepL", @"timeStepR", @"underarmTurnL", @"underarmTurnR"];
     return valuesForClosedBasic;
 }
 
@@ -68,31 +68,31 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_crossBasic
 {
-    NSArray *valuesForCrossBasic = @[@"alemana", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"hockeyStick", @"newYorkLSP", @"sideStep", @"spiral", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnR"];
+    NSArray *valuesForCrossBasic = @[@"alemana", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"hockeyStick", @"newYorkLSP", @"sideStepLwithLF", @"sideStepRwithLF", @"spiral", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnR"];
     return valuesForCrossBasic;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_cubanBreakL
 {
-    NSArray *valuesForcubanBreakL = @[@"closedBasic", @"cubanBreakR", @"fan", @"handToHandLSP", @"newYorkRSP", @"sideStep", @"spotTurnL", @"switchTurnL", @"timeStepR", @"underarmTurnL"];
-    return valuesForcubanBreakL;
+    NSArray *valuesForCubanBreakL = @[@"closedBasic", @"cubanBreakR", @"fan", @"handToHandLSP", @"newYorkRSP", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnL", @"switchTurnL", @"timeStepR", @"underarmTurnL"];
+    return valuesForCubanBreakL;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_cubanBreakR
 {
-    NSArray *valuesForCubanBreakR = @[@"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openHipTwist", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnR"];
+    NSArray *valuesForCubanBreakR = @[@"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openHipTwist", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnR"];
     return valuesForCubanBreakR;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_cubanBreakSplitL
 {
-    NSArray *valuesForCubanBreakSplitL = @[@"chase", @"closedBasic", @"crossBasic", @"cubanBreakSplitR", @"fan", @"handToHandRSP", @"newYorkRSP", @"openHipTwist", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnR"];
+    NSArray *valuesForCubanBreakSplitL = @[@"chase", @"closedBasic", @"crossBasic", @"cubanBreakSplitR", @"fan", @"handToHandRSP", @"newYorkRSP", @"openHipTwist", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnR"];
     return valuesForCubanBreakSplitL;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_cubanBreakSplitR
 {
-    NSArray *valuesForCubanBreakSplitR = @[@"closedBasic", @"cubanBreakSplitL", @"fan", @"handToHandLSP", @"newYorkLSP", @"sideStep", @"spotTurnL", @"switchTurnL", @"timeStepR", @"underarmTurnL"];
+    NSArray *valuesForCubanBreakSplitR = @[@"closedBasic", @"cubanBreakSplitL", @"fan", @"handToHandLSP", @"newYorkLSP", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnL", @"switchTurnL", @"timeStepR", @"underarmTurnL"];
     return valuesForCubanBreakSplitR;
 }
 
@@ -110,13 +110,13 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_handToHandLSP
 {
-    NSArray *valuesForHandToHandLSP = @[@"closedBasic", @"closedHipTwist", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"ropeSpinning", @"sideStep", @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForHandToHandLSP = @[@"closedBasic", @"closedHipTwist", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"ropeSpinning", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForHandToHandLSP;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_handToHandRSP
 {
-    NSArray *valuesForHandToHandRSP = @[@"aida", @"closedBasic", @"closedHipTwist", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spiral", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
+    NSArray *valuesForHandToHandRSP = @[@"aida", @"closedBasic", @"closedHipTwist", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStepLwithRF", @"sideStepRwithRF", @"spiral", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
     return valuesForHandToHandRSP;
 }
 
@@ -140,13 +140,13 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_newYorkLSP
 {
-    NSArray *valuesForNewYorkLSP = @[@"closedBasic", @"closedHipTwist", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
+    NSArray *valuesForNewYorkLSP = @[@"closedBasic", @"closedHipTwist", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
     return valuesForNewYorkLSP;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_newYorkRSP
 {
-    NSArray *valuesForNewYorkRSP = @[@"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForNewYorkRSP = @[@"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForNewYorkRSP;
 }
 
@@ -196,7 +196,7 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_ropeSpinning
 {
-    NSArray *valuesForRopeSpinning= @[@"closedBasic", @"closedHipTwist", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL",  @"fan", @"handToHandRSP", @"naturalOpeningOut", @"newYorkLSP", @"openBasic", @"ropeSpinning", @"sideStep", @"spiral", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForRopeSpinning= @[@"closedBasic", @"closedHipTwist", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL",  @"fan", @"handToHandRSP", @"naturalOpeningOut", @"newYorkLSP", @"openBasic", @"ropeSpinning", @"sideStepLwithLF", @"sideStepRwithLF", @"spiral", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForRopeSpinning;
 }
 
@@ -208,50 +208,68 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_shoulderToShoulderL
 {
-    NSArray *valuesForShoulderToShoulderL = @[@"alemana", @"closedBasic", @"closedHipTwist", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"shoulderToShoulderR", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR" ];
+    NSArray *valuesForShoulderToShoulderL = @[@"alemana", @"closedBasic", @"closedHipTwist", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"shoulderToShoulderR", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR" ];
     return valuesForShoulderToShoulderL;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_shoulderToShoulderR
 {
-    NSArray *valuesForShoulderToShoulderR = @[@"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForShoulderToShoulderR = @[@"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForShoulderToShoulderR;
 }
 
-//FIX ME
-+ (NSArray*) valuesArrayForChaChaSilver_sideStep
++ (NSArray*) valuesArrayForChaChaSilver_sideStepLwithLF
 {
-    NSArray *valuesForSideStep = @[@"alemana", @"closedBasic", @"crossBasic", @"closedHipTwist", @"cubanBreakL", @"cubanBreakR", @"cubanBreakSplitL", @"cubanBreakSplitR", @"fan", @"handToHand", @"hockeyStick", @"naturalOpeningOut", @"naturalTop", @"newYorkRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulder", @"sideStep", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"threeChasBack", @"threeChasForward", @"timeStep"];
-    return valuesForSideStep;
+    NSArray *valuesForSideStepLwithLF = @[@"closedBasic", @"openBasic", @"newYorkRSP", @"spotTurnL", @"switchTurnL", @"underarmTurnR", @"shoulderToShoulderR", @"handToHandLSP", @"sideStepLwithRF", @"timeStepR", @"cubanBreakR", @"cubanBreakSplitR"];
+    return valuesForSideStepLwithLF;
 }
+
++ (NSArray*) valuesArrayForChaChaSilver_sideStepLwithRF
+{
+    NSArray *valuesForSideStepLwithRF = @[@"closedBasic", @"openBasic", @"thereAndBack", @"sideStepLwithLF", @"fan"];
+    return valuesForSideStepLwithRF;
+}
+
++ (NSArray*) valuesArrayForChaChaSilver_sideStepRwithLF
+{
+    NSArray *valuesForSideStepRwithLF = @[@"closedBasic", @"openBasic", @"underarmTurnR", @"sideStepRwithRF", @"fan"];
+    return valuesForSideStepRwithLF;
+}
+
++ (NSArray*) valuesArrayForChaChaSilver_sideStepRwithRF
+{
+    NSArray *valuesForSideStepRwithRF = @[@"crossBasic", @"closedBasic",  @"openBasic", @"newYorkLSP", @"spotTurnR", @"switchTurnR", @"shoulderToShoulderL", @"handToHandRSP", @"sideStepRwithLF", @"timeStepL", @"fan", @"cubanBreakR", @"cubanBreakSplitR"];
+    return valuesForSideStepRwithRF;
+}
+
 
 + (NSArray*) valuesArrayForChaChaSilver_spotTurnL
 {
-    NSArray *valuesForSpotTurnL = @[@"alemana", @"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"curl", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"openHipTwist", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnR"];
+    NSArray *valuesForSpotTurnL = @[@"alemana", @"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"curl", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"openHipTwist", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnR"];
     return valuesForSpotTurnL;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_spotTurnR
 {
-    NSArray *valuesForSpotTurnR = @[@"aida", @"closedBasic", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnL"];
+    NSArray *valuesForSpotTurnR = @[@"aida", @"closedBasic", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStepLwithRF", @"sideStepRwithRF",@"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnL"];
     return valuesForSpotTurnR;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_switchTurnL
 {
-    NSArray *valuesForSwitchTurnL = @[@"alemana", @"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"curl", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"openHipTwist", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnR"];
+    NSArray *valuesForSwitchTurnL = @[@"alemana", @"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"curl", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"openHipTwist", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnR"];
     return valuesForSwitchTurnL;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_switchTurnR
 {
-    NSArray *valuesForSwitchTurnR = @[@"aida", @"closedBasic", @"cubanBreakR", @"cubanBreakSplitR",  @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnL"];
+    NSArray *valuesForSwitchTurnR = @[@"aida", @"closedBasic", @"cubanBreakR", @"cubanBreakSplitR",  @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnL"];
     return valuesForSwitchTurnR;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_thereAndBack
 {
-    NSArray *valuesForThereAndBack = @[@"closedBasic", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandRSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForThereAndBack = @[@"closedBasic", @"cubanBreakR", @"cubanBreakSplitR", @"fan", @"handToHandRSP", @"openBasic", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnL"];
     return valuesForThereAndBack;
 }
 
@@ -263,31 +281,31 @@
 
 + (NSArray*) valuesArrayForChaChaSilver_threeChasForward
 {
-    NSArray *valuesForThreeChasForward =   @[@"aida", @"alemana", @"chase", @"closedBasic", @"crossBasic", @"curl", @"fan", @"handToHandLSP", @"handToHandRSP", @"newYorkLSP", @"newYorkRSP", @"openBasic", @"openHipTwist", @"sideStep", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"thereAndBack"];
+    NSArray *valuesForThreeChasForward =   @[@"aida", @"alemana", @"chase", @"closedBasic", @"crossBasic", @"curl", @"fan", @"handToHandLSP", @"handToHandRSP", @"newYorkLSP", @"newYorkRSP", @"openBasic", @"openHipTwist", @"sideStepLwithLF", @"sideStepRwithLF", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"thereAndBack"];
     return valuesForThreeChasForward;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_timeStepL
 {
-    NSArray *valuesForTimeStepL = @[ @"closedBasic", @"cubanBreakR", @"cubanBreakSplitR", @"handToHandLSP", @"newYorkRSP", @"openBasic",  @"shoulderToShoulderR", @"sideStep", @"spotTurnL", @"switchTurnL", @"timeStepR", @"underarmTurnR"];
+    NSArray *valuesForTimeStepL = @[ @"closedBasic", @"cubanBreakR", @"cubanBreakSplitR", @"handToHandLSP", @"newYorkRSP", @"openBasic",  @"shoulderToShoulderR", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnL", @"switchTurnL", @"timeStepR", @"underarmTurnR"];
     return valuesForTimeStepL;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_timeStepR
 {
-    NSArray *valuesForTimeStepR = @[@"alemana", @"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"curl", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"openHipTwist", @"shoulderToShoulderL", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForTimeStepR = @[@"alemana", @"chase", @"closedBasic", @"crossBasic", @"cubanBreakL", @"cubanBreakSplitL", @"curl", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"openHipTwist", @"shoulderToShoulderL", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnL"];
     return valuesForTimeStepR;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_underarmTurnL
 {
-    NSArray *valuesForUnderarmTurnL = @[@"closedBasic", @"fan", @"handToHandLSP",  @"naturalTop", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"timeStepR", @"underarmTurnR"];
+    NSArray *valuesForUnderarmTurnL = @[@"closedBasic", @"fan", @"handToHandLSP",  @"naturalTop", @"newYorkRSP", @"openBasic", @"sideStepLwithRF", @"sideStepRwithRF", @"spotTurnR", @"switchTurnR", @"timeStepR", @"underarmTurnR"];
     return valuesForUnderarmTurnL;
 }
 
 + (NSArray*) valuesArrayForChaChaSilver_underarmTurnR
 {
-    NSArray *valuesForUnderarmTurnR = @[@"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL", @"sideStep", @"spotTurnL", @"switchTurnL", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
+    NSArray *valuesForUnderarmTurnR = @[@"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL", @"sideStepLwithLF", @"sideStepRwithLF", @"spotTurnL", @"switchTurnL", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
     return valuesForUnderarmTurnR;
 }
 

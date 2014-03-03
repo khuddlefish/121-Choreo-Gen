@@ -53,7 +53,10 @@
 + (NSArray*) valuesArrayForChaChaSilver_spiral;
 + (NSArray*) valuesArrayForChaChaSilver_shoulderToShoulderL;
 + (NSArray*) valuesArrayForChaChaSilver_shoulderToShoulderR;
-+ (NSArray*) valuesArrayForChaChaSilver_sideStep;
++ (NSArray*) valuesArrayForChaChaSilver_sideStepLwithLF;
++ (NSArray*) valuesArrayForChaChaSilver_sideStepLwithRF;
++ (NSArray*) valuesArrayForChaChaSilver_sideStepRwithLF;
++ (NSArray*) valuesArrayForChaChaSilver_sideStepRwithRF;
 + (NSArray*) valuesArrayForChaChaSilver_spotTurnL;
 + (NSArray*) valuesArrayForChaChaSilver_spotTurnR;
 + (NSArray*) valuesArrayForChaChaSilver_switchTurnL;
