@@ -15,6 +15,13 @@
 
 @implementation SelectDanceViewController
 
+/*
+ Should implement using IBOutlets somehwo
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+}
+*/
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
