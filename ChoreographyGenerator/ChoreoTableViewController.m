@@ -12,6 +12,8 @@
 @interface ChoreoTableViewController ()
 
 @property NSMutableArray *choreographyItems;
+
+//planning to move these properties to SelectDanceViewController
 @property NSString *danceStyle;
 @property NSString *difficultyLevel;
 @property int numberOfMoves;

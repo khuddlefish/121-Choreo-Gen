@@ -16,14 +16,6 @@
 @implementation SelectDanceViewController
 
 
--(void)chooseLevel: (UIButton *) levelButton {
-    
-}
-
--(void)chooseNumMoves: (UITextField *) numField {
-    
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -68,9 +60,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
-    self.selectedStyle = [self.danceNames objectAtIndex:row] ;
-    
+   
 }
 
 - (void)viewWillAppear:(BOOL)animated
