@@ -10,8 +10,15 @@
 
 @interface SelectDanceViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 
+//connection to picker view from storyboard
 @property (weak, nonatomic) IBOutlet UIPickerView *dancePicker;
+
+//property for array of dance styles in picker view
 @property NSArray *danceNames;
+
+//properties that will be determined by user input
 @property NSString *selectedStyle;
+@property NSString *selectedLevel;
+@property int numMoves;
 
 @end

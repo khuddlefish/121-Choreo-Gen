@@ -11,6 +11,7 @@
 
 @interface ChoreoTableViewController : UITableViewController
 
-- (IBAction)generateDance:(UIStoryboardSegue *)segue;
+//declaration for segue
+//- (IBAction)generateDance:(UIStoryboardSegue *)segue;
 
 @end

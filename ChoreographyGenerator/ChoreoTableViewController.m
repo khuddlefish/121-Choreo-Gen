@@ -8,6 +8,7 @@
 
 #import "ChoreoTableViewController.h"
 #import "choreographyDictionary.h"
+#import "SelectDanceViewController.h"
 
 @interface ChoreoTableViewController ()
 
@@ -21,10 +22,6 @@
 @end
 
 @implementation ChoreoTableViewController
-
-- (IBAction)generateDance:(UIStoryboardSegue *)segue
-{
-}
 
 
 //FOR TESTING
@@ -54,8 +51,27 @@
 
 }
 
-
-
+//method declaration for segue
+/*
+- (IBAction)generateDance:(UIStoryboardSegue *)segue
+{
+    //gets access to view controller that triggered segue
+    SelectDanceViewController *source = [segue sourceViewController];
+    
+    //new choreographyGenerator object
+    choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
+    [choreography setDanceStyle: source.selectedStyle];            //sets dance style property
+    [choreography setDifficultyLevel: source.selectedLevel];  //sets difficulty level property
+    [choreography setMovesDictionary];                     //sets the dictionary property
+    
+    //Generates choreography, starting with a basic
+    NSString * previousMove = @"closedBasic";
+    for (int i = 0; i < source.numMoves; ++i) {
+        [self.choreographyItems addObject: previousMove]; //save the sequence
+        previousMove = [choreography chooseAMoveAfter: previousMove];
+    }
+}
+*/
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -115,6 +131,7 @@
     return cell;
 }
 
+//sets navigation bar to be visible
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden = NO;

@@ -63,6 +63,7 @@
    
 }
 
+//sets navigation bar to be hidden
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden = YES;
