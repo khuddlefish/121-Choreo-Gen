@@ -20,11 +20,10 @@
 
 @implementation ChoreoTableViewController
 
-- (IBAction)setDanceStyle:(UIStoryboardSegue *)segue
+- (IBAction)generateDance:(UIStoryboardSegue *)segue
 {
-    
-
 }
+
 
 //FOR TESTING
 - (void) loadChoreographyData

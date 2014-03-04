@@ -10,8 +10,14 @@
 
 @interface SelectDanceViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIPickerView *dancePicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *dancePicker;
 @property NSArray *danceNames;
+@property NSString *selectedStyle;
+@property NSString *selectedLevel;
+@property int numberOfMoves;
+
+-(void) chooseLevel: (UIButton *) levelButton;
+-(void) chooseNumMoves: (UITextField *) numField;
 
 
 @end

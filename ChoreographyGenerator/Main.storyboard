@@ -143,6 +143,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="f6a-V6-d4M" kind="unwind" unwindAction="generateDance:" id="5Vc-33-eMf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Dance Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twd-pw-AAd">
                                 <rect key="frame" x="68" y="46" width="197" height="21"/>
@@ -156,10 +159,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="c1N-i5-Fb1"/>
                     <connections>
+                        <outlet property="chooseStyle" destination="B9e-1i-XHW" id="mv0-he-Gpc"/>
                         <outlet property="dancePicker" destination="B9e-1i-XHW" id="xfk-Hg-I1A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68q-nh-cFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="f6a-V6-d4M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1487" y="-84"/>
         </scene>
