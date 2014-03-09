@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E14701D418C954EC00C5B176 /* chaChaBronze.m in Sources */ = {isa = PBXBuildFile; fileRef = E14701D118C954EC00C5B176 /* chaChaBronze.m */; };
+		E14701D518C954EC00C5B176 /* chaChaSilver.m in Sources */ = {isa = PBXBuildFile; fileRef = E14701D318C954EC00C5B176 /* chaChaSilver.m */; };
 		E1CE600718ACFB530024F6C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE600618ACFB530024F6C8 /* main.m */; };
 		E1CE600918ACFB530024F6C8 /* Dictionary_v1.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1CE600818ACFB530024F6C8 /* Dictionary_v1.1 */; };
 		E1CE601118ACFBD40024F6C8 /* choreographyDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE601018ACFBD40024F6C8 /* choreographyDictionary.m */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E14701D018C954EC00C5B176 /* chaChaBronze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chaChaBronze.h; sourceTree = "<group>"; };
+		E14701D118C954EC00C5B176 /* chaChaBronze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chaChaBronze.m; sourceTree = "<group>"; };
+		E14701D218C954EC00C5B176 /* chaChaSilver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chaChaSilver.h; sourceTree = "<group>"; };
+		E14701D318C954EC00C5B176 /* chaChaSilver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chaChaSilver.m; sourceTree = "<group>"; };
 		E1CE600318ACFB520024F6C8 /* Dictionary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Dictionary; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CE600618ACFB530024F6C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1CE600818ACFB530024F6C8 /* Dictionary_v1.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Dictionary_v1.1; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 			children = (
 				E1CE600F18ACFBD40024F6C8 /* choreographyDictionary.h */,
 				E1CE601018ACFBD40024F6C8 /* choreographyDictionary.m */,
+				E14701D018C954EC00C5B176 /* chaChaBronze.h */,
+				E14701D118C954EC00C5B176 /* chaChaBronze.m */,
+				E14701D218C954EC00C5B176 /* chaChaSilver.h */,
+				E14701D318C954EC00C5B176 /* chaChaSilver.m */,
 				E1CE600518ACFB520024F6C8 /* Dictionary v1 */,
 				E1CE600418ACFB520024F6C8 /* Products */,
 			);
@@ -124,6 +134,8 @@
 			files = (
 				E1CE601118ACFBD40024F6C8 /* choreographyDictionary.m in Sources */,
 				E1CE600718ACFB530024F6C8 /* main.m in Sources */,
+				E14701D518C954EC00C5B176 /* chaChaSilver.m in Sources */,
+				E14701D418C954EC00C5B176 /* chaChaBronze.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

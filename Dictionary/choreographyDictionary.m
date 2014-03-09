@@ -8,30 +8,8 @@
 
 #import "choreographyDictionary.h"
 
+
 @implementation choreographyDictionary
-
-
-/*
- * danceStyleMenu: Shows the user what styles are available and proper formatting.
- *      Input: none
- *      Output: none
- */
-+ (void) danceStyleMenu {
-    NSLog(@"Dance styles: ChaCha");
-//    NSLog(@"Dance styles: Waltz");
-}
-
-
-/*
- * difficultyLevelMenu: Shows the user what difficulty levels are available and proper formatting. 
- *      Input: none
- *      Output: none
- */
-+ (void) difficultyLevelMenu {
-    NSLog(@"Difficulty Level: Bronze");
-//    NSLog(@"Difficulty Level: Silver");
-//    NSLog(@"Difficulty Level: Gold");
-}
 
 
 /*
@@ -56,232 +34,6 @@
 }
 
 
-/***********************************************
- *                                             *
- *           ENUMERATED DICTIONARIES           *
- *                                             *
- ***********************************************/
-+ (NSDictionary*) ChaChaBronzeDictionary
-{
-    NSDictionary *ChaChaBronzeDictionary = @{
-         @"alemana": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"alemana"],
-         @"closedBasic": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"closedBasic"],
-         @"closedHipTwist": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"closedHipTwist"],
-         @"fan": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"fan"],
-         @"handToHandLSP": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"handToHandLSP"],
-         @"handToHandRSP": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"handToHandRSP"],
-         @"hockeyStick": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"hockeyStick"],
-         @"naturalOpeningOut": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"naturalOpeningOut"],
-         @"naturalTop": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"naturalTop"],
-         @"newYorkLSP": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"newYorkLSP"],
-         @"newYorkRSP": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"newYorkRSP"],
-         @"openBasic": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"openBasic"],
-         @"shoulderToShoulderL": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"shoulderToShoulderL"],
-         @"shoulderToShoulderR": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"shoulderToShoulderR"],
-         @"sideStep": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"sideStep"],
-         @"spotTurnL": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"spotTurnL"],
-         @"spotTurnR": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"spotTurnR"],
-         @"switchTurnL": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"switchTurnL"],
-         @"switchTurnR": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"switchTurnR"],
-         @"thereAndBack": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"thereAndBack"],
-         @"threeChasBack": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"threeChasBack"],
-         @"threeChasForward": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"threeChasForward"],
-         @"timeStepL": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"timeStepL"],
-         @"timeStepR": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"timeStepR"],
-         @"underarmTurnL": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"underarmTurnL"],
-         @"underarmTurnR": [choreographyDictionary getValuesArrayForChaChaBronzeMove:@"underarmTurnR"]
-         };
-    
-    return ChaChaBronzeDictionary;
-}
-
-/*
- * getValuesArrayForChaChaBronzeMove: calls the correct method of next possible moves
- *      Input: an NSString* representing the move that is the dictionary key
- *      Output: an NSArray* (of NSString*) that are the possible next moves
- */
-+ (NSArray*) getValuesArrayForChaChaBronzeMove: (NSString*) move
-{
-    //Create the correct name of the method name for the move
-    NSMutableString *arrayNameString =  [NSMutableString new];
-    [arrayNameString appendString: @"valuesArrayForChaChaBronze_"];
-    [arrayNameString appendString:move];
-    
-    //Create a selector to be able to use this string as a message
-    SEL arrayName = NSSelectorFromString(arrayNameString);
-    
-    return [choreographyDictionary performSelector:arrayName];
-}
-
-
-/***********************************************
- *                                             *
- *           ENUMERATED VALUE ARRAYS           *
- *                                             *
- ***********************************************/
-
-//NOTE: right now all the moves are alphabetized. Not sure if that's optimal for randomization
-
-//---------------------------------------------
-//               Cha Cha - Bronze             |
-//---------------------------------------------
-
-+ (NSArray*) valuesArrayForChaChaBronze_alemana
-{
-    NSArray *valuesForAlemana = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandRSP", @"newYorkLSP", @"naturalOpeningOut", @"openBasic", @"shoulderToShoulderL", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
-    return valuesForAlemana;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_closedBasic
-{
-    NSArray *valuesForClosedBasic = @[@"closedBasic", @"fan", @"handToHandLSP", @"handToHandLSP", @"handToHandRSP", @"naturalTop", @"newYorkLSP", @"openBasic", @"sideStep", @"shoulderToShoulderL", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"thereAndBack", @"threeChasBack", @"threeChasForward", @"timeStepL", @"timeStepR", @"underarmTurnL", @"underarmTurnR"];
-    return valuesForClosedBasic;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_closedHipTwist
-{
-    NSArray *valuesForClosedHipTwist = @[@"alemana", @"hockeyStick", @"newYorkLSP", @"openBasic", @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
-    return valuesForClosedHipTwist;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_fan
-{
-    NSArray *valuesForFan = @[@"alemana", @"hockeyStick"];
-    return valuesForFan;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_handToHandLSP
-{
-    NSArray *valuesForHandToHandLSP = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
-    return valuesForHandToHandLSP;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_handToHandRSP
-{
-    NSArray *valuesForHandToHandRSP = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
-    return valuesForHandToHandRSP;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_hockeyStick
-{
-    NSArray *valuesForHockeyStick = @[@"alemana", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL",   @"spotTurnR", @"switchTurnR", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
-    return valuesForHockeyStick;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_naturalOpeningOut
-{
-    NSArray *valuesForNaturalOpeningOut = @[@"closedBasic", @"fan", @"openBasic", @"underarmTurnR"];
-    return valuesForNaturalOpeningOut;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_naturalTop
-{
-    NSArray *valuesForNaturalTop = @[@"closedBasic", @"closedHipTwist", @"fan", @"hockeyStick", @"naturalOpeningOut", @"openBasic"];
-    return valuesForNaturalTop;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_newYorkLSP
-{
-    NSArray *valuesForNewYorkLSP = @[@"closedBasic", @"closedHipTwist", @"fan", @"handToHandLSP", @"newYorkRSP",  @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR"];
-    return valuesForNewYorkLSP;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_newYorkRSP
-{
-    NSArray *valuesForNewYorkRSP = @[@"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
-    return valuesForNewYorkRSP;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_openBasic
-{
-    NSArray *valuesForOpenBasic = @[@"alemana", @"closedBasic", @"fan", @"naturalTop", @"openBasic", @"threeChasBack", @"threeChasForward"];
-    return valuesForOpenBasic;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulderL
-{
-    NSArray *valuesForShoulderToShoulderL = @[@"alemana", @"closedBasic", @"closedHipTwist",                                              @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"shoulderToShoulderR", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnR" ];
-    return valuesForShoulderToShoulderL;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulderR
-{
-    NSArray *valuesForShoulderToShoulderR = @[@"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL" ];
-    return valuesForShoulderToShoulderR;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_sideStep
-{
-    NSArray *valuesForSideStep = @[@"alemana", @"closedBasic", @"closedHipTwist", @"fan", @"handToHand", @"hockeyStick", @"naturalOpeningOut", @"naturalTop", @"newYorkRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulder", @"sideStep", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"threeChasBack", @"threeChasForward", @"timeStep"];
-    return valuesForSideStep;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_spotTurnL
-{
-    NSArray *valuesForSpotTurnL = @[@"alemana", @"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnR"];
-    return valuesForSpotTurnL;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_spotTurnR
-{
-    NSArray *valuesForSpotTurnR = @[@"closedBasic", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnL"];
-    return valuesForSpotTurnR;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_switchTurnL
-{
-    NSArray *valuesForSwitchTurnL = @[@"alemana", @"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnR"];
-    return valuesForSwitchTurnL;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_switchTurnR
-{
-    NSArray *valuesForSwitchTurnR = @[@"closedBasic", @"fan", @"handToHandLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"switchTurnL", @"threeChasForward", @"timeStepR", @"underarmTurnL"];
-    return valuesForSwitchTurnR;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_thereAndBack
-{
-    NSArray *valuesForThereAndBack = @[@"closedBasic", @"fan", @"handToHandRSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnL"];
-    return valuesForThereAndBack;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_threeChasBack
-{
-    NSArray *valuesForThreeChasBack = @[@"alemana", @"closedBasic", @"fan", @"naturalTop", @"openBasic"];
-    return valuesForThreeChasBack;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_threeChasForward
-{
-    NSArray *valuesForThreeChasForward =   @[@"alemana", @"closedBasic", @"fan", @"handToHandLSP", @"handToHandRSP", @"newYorkLSP", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnL", @"spotTurnR", @"switchTurnL", @"switchTurnR", @"thereAndBack"];
-    return valuesForThreeChasForward;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_timeStepL
-{
-    NSArray *valuesForTimeStepL = @[ @"closedBasic", @"handToHandLSP", @"newYorkRSP", @"openBasic",  @"shoulderToShoulderR", @"sideStep", @"spotTurnL", @"switchTurnL", @"timeStepR", @"underarmTurnR"];
-    return valuesForTimeStepL;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_timeStepR
-{
-    NSArray *valuesForTimeStepR = @[@"alemana", @"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic",  @"shoulderToShoulderL", @"sideStep", @"spotTurnR", @"switchTurnR", @"thereAndBack", @"timeStepL", @"underarmTurnL"];
-    return valuesForTimeStepR;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_underarmTurnL
-{
-    NSArray *valuesForUnderarmTurnL = @[@"closedBasic", @"fan", @"handToHandLSP",  @"naturalTop", @"newYorkRSP", @"openBasic", @"sideStep", @"spotTurnR", @"switchTurnR", @"timeStepR", @"underarmTurnR"];
-    return valuesForUnderarmTurnL;
-}
-
-+ (NSArray*) valuesArrayForChaChaBronze_underarmTurnR
-{
-    NSArray *valuesForUnderarmTurnR = @[@"closedBasic", @"fan", @"handToHandRSP", @"newYorkLSP", @"openBasic", @"shoulderToShoulderL", @"sideStep", @"spotTurnL", @"switchTurnL", @"thereAndBack", @"threeChasForward", @"timeStepL", @"underarmTurnL"];
-    return valuesForUnderarmTurnR;
-}
-
 /*
  * chooseAMoveAfter: chooses the next move for the choreography
  *      Input: a NSString* representing the previous move
@@ -294,6 +46,123 @@
     NSUInteger randomIndex = arc4random() % [movesArray count];
     
     return movesArray[randomIndex];
+}
+
+/*
+ * getNextArray: gets the array of next possible moves after a given step of choreography
+ *      Input: a NSString* representing the previous move
+ *      Output: a NSArray* representing the next possible moves
+ */
+- (NSArray*) getNextArray: (NSString*) previousMove
+{
+    NSArray *movesArray = [self.movesDictionary objectForKey: previousMove];
+    
+    return movesArray;
+}
+
+
+
+/***********************************************
+ *                                             *
+ *           ENUMERATED DICTIONARIES           *
+ *                                             *
+ ***********************************************/
+
+//---------------------------------------------
+//               Cha Cha - Bronze             |
+//---------------------------------------------
+
++ (NSDictionary*) ChaChaBronzeDictionary
+{
+    NSDictionary *ChaChaBronzeDictionary = @{
+             @"alemana": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"alemana"],
+             @"closedBasic": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"closedBasic"],
+             @"closedHipTwist": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"closedHipTwist"],
+             @"fan": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"fan"],
+             @"handToHandLSP": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"handToHandLSP"],
+             @"handToHandRSP": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"handToHandRSP"],
+             @"hockeyStick": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"hockeyStick"],
+             @"naturalOpeningOut": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"naturalOpeningOut"],
+             @"naturalTop": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"naturalTop"],
+             @"newYorkLSP": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"newYorkLSP"],
+             @"newYorkRSP": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"newYorkRSP"],
+             @"openBasic": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"openBasic"],
+             @"shoulderToShoulderL": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"shoulderToShoulderL"],
+             @"shoulderToShoulderR": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"shoulderToShoulderR"],
+             @"sideStepLwithLF": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"sideStepLwithLF"],
+             @"sideStepLwithRF": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"sideStepLwithRF"],
+             @"sideStepRwithLF": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"sideStepRwithLF"],
+             @"sideStepRwithRF": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"sideStepRwithRF"],
+             @"spotTurnL": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"spotTurnL"],
+             @"spotTurnR": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"spotTurnR"],
+             @"switchTurnL": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"switchTurnL"],
+             @"switchTurnR": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"switchTurnR"],
+             @"thereAndBack": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"thereAndBack"],
+             @"threeChasBack": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"threeChasBack"],
+             @"threeChasForward": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"threeChasForward"],
+             @"timeStepL": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"timeStepL"],
+             @"timeStepR": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"timeStepR"],
+             @"underarmTurnL": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"underarmTurnL"],
+             @"underarmTurnR": [chaChaBronze getValuesArrayForChaChaBronzeMove:@"underarmTurnR"]
+             };
+    
+    return ChaChaBronzeDictionary;
+}
+
+
+
+//---------------------------------------------
+//               Cha Cha - Silver             |
+//---------------------------------------------
+
++ (NSDictionary*) ChaChaSilverDictionary
+{
+    NSDictionary *ChaChaSilverDictionary = @{
+             @"aida": [chaChaSilver getValuesArrayForChaChaSilverMove:@"aida"],
+             @"alemana": [chaChaSilver getValuesArrayForChaChaSilverMove:@"alemana"],
+             @"chase": [chaChaSilver getValuesArrayForChaChaSilverMove:@"chase"],
+             @"closedBasic": [chaChaSilver getValuesArrayForChaChaSilverMove:@"closedBasic"],
+             @"closedHipTwist": [chaChaSilver getValuesArrayForChaChaSilverMove:@"closedHipTwist"],
+             @"crossBasic": [chaChaSilver getValuesArrayForChaChaSilverMove:@"crossBasic"],
+             @"cubanBreakL": [chaChaSilver getValuesArrayForChaChaSilverMove:@"cubanBreakL"],
+             @"cubanBreakR": [chaChaSilver getValuesArrayForChaChaSilverMove:@"cubanBreakR"],
+             @"cubanBreakSplitL": [chaChaSilver getValuesArrayForChaChaSilverMove:@"cubanBreakSplitL"],
+             @"cubanBreakSplitR": [chaChaSilver getValuesArrayForChaChaSilverMove:@"cubanBreakSplitR"],
+             @"curl": [chaChaSilver getValuesArrayForChaChaSilverMove:@"curl"],
+             @"fan": [chaChaSilver getValuesArrayForChaChaSilverMove:@"fan"],
+             @"handToHandLSP": [chaChaSilver getValuesArrayForChaChaSilverMove:@"handToHandLSP"],
+             @"handToHandRSP": [chaChaSilver getValuesArrayForChaChaSilverMove:@"handToHandRSP"],
+             @"hockeyStick": [chaChaSilver getValuesArrayForChaChaSilverMove:@"hockeyStick"],
+             @"naturalOpeningOut": [chaChaSilver getValuesArrayForChaChaSilverMove:@"naturalOpeningOut"],
+             @"naturalTop": [chaChaSilver getValuesArrayForChaChaSilverMove:@"naturalTop"],
+             @"newYorkLSP": [chaChaSilver getValuesArrayForChaChaSilverMove:@"newYorkLSP"],
+             @"newYorkRSP": [chaChaSilver getValuesArrayForChaChaSilverMove:@"newYorkRSP"],
+             @"openBasic": [chaChaSilver getValuesArrayForChaChaSilverMove:@"openBasic"],
+             @"openHipTwist": [chaChaSilver getValuesArrayForChaChaSilverMove:@"openHipTwist"],
+             @"openingOutFromReverseTop": [chaChaSilver getValuesArrayForChaChaSilverMove:@"openingOutFromReverseTop"],
+             @"reverseTop": [chaChaSilver getValuesArrayForChaChaSilverMove:@"reverseTop"],
+             @"ropeSpinning": [chaChaSilver getValuesArrayForChaChaSilverMove:@"ropeSpinning"],
+             @"shoulderToShoulderL": [chaChaSilver getValuesArrayForChaChaSilverMove:@"shoulderToShoulderL"],
+             @"shoulderToShoulderR": [chaChaSilver getValuesArrayForChaChaSilverMove:@"shoulderToShoulderR"],
+             @"sideStepLwithLF": [chaChaSilver getValuesArrayForChaChaSilverMove:@"sideStepLwithLF"],
+             @"sideStepLwithRF": [chaChaSilver getValuesArrayForChaChaSilverMove:@"sideStepLwithRF"],
+             @"sideStepRwithLF": [chaChaSilver getValuesArrayForChaChaSilverMove:@"sideStepRwithLF"],
+             @"sideStepRwithRF": [chaChaSilver getValuesArrayForChaChaSilverMove:@"sideStepRwithRF"],
+             @"spiral": [chaChaSilver getValuesArrayForChaChaSilverMove:@"spiral"],
+             @"spotTurnL": [chaChaSilver getValuesArrayForChaChaSilverMove:@"spotTurnL"],
+             @"spotTurnR": [chaChaSilver getValuesArrayForChaChaSilverMove:@"spotTurnR"],
+             @"switchTurnL": [chaChaSilver getValuesArrayForChaChaSilverMove:@"switchTurnL"],
+             @"switchTurnR": [chaChaSilver getValuesArrayForChaChaSilverMove:@"switchTurnR"],
+             @"thereAndBack": [chaChaSilver getValuesArrayForChaChaSilverMove:@"thereAndBack"],
+             @"threeChasBack": [chaChaSilver getValuesArrayForChaChaSilverMove:@"threeChasBack"],
+             @"threeChasForward": [chaChaSilver getValuesArrayForChaChaSilverMove:@"threeChasForward"],
+             @"timeStepL": [chaChaSilver getValuesArrayForChaChaSilverMove:@"timeStepL"],
+             @"timeStepR": [chaChaSilver getValuesArrayForChaChaSilverMove:@"timeStepR"],
+             @"underarmTurnL": [chaChaSilver getValuesArrayForChaChaSilverMove:@"underarmTurnL"],
+             @"underarmTurnR": [chaChaSilver getValuesArrayForChaChaSilverMove:@"underarmTurnR"]
+             };
+    
+    return ChaChaSilverDictionary;
 }
 
 @end

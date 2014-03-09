@@ -14,51 +14,139 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        int LENGTH_OF_USER_INPUT = 40; //This is the maximum number of characters for user input
-            
-        //Gets the dance style from the user
-        //This should be one word no spaces, each word uppercase
-        [choreographyDictionary danceStyleMenu];
-        NSLog(@"Pick a dance style: ");
-        char cstring[LENGTH_OF_USER_INPUT];
-        scanf("%s", cstring);
-        NSString *danceStyle = [NSString stringWithCString:cstring encoding:1];
+//        int LENGTH_OF_USER_INPUT = 40; //This is the maximum number of characters for user input
         
-        //Gets the difficulty level from the user
-        [choreographyDictionary difficultyLevelMenu];
-        NSLog(@"Pick a difficulty level: ");
-        char cstring2[LENGTH_OF_USER_INPUT];
-        scanf("%s", cstring2);
-        NSString *difficultyLevel = [NSString stringWithCString:cstring2 encoding:1];
+//        //Gets the dance style from the user
+//        //This should be one word no spaces, each word uppercase
+//        [choreographyDictionary danceStyleMenu];
+//        NSLog(@"Pick a dance style: ");
+//        char cstring[LENGTH_OF_USER_INPUT];
+//        scanf("%s", cstring);
+//        NSString *danceStyle = [NSString stringWithCString:cstring encoding:1];
+//        
+//        //Gets the difficulty level from the user
+//        [choreographyDictionary difficultyLevelMenu];
+//        NSLog(@"Pick a difficulty level: ");
+//        char cstring2[LENGTH_OF_USER_INPUT];
+//        scanf("%s", cstring2);
+//        NSString *difficultyLevel = [NSString stringWithCString:cstring2 encoding:1];
+//        
+//        //Gets a desired length for the routine
+//        int numberOfMoves;
+//        NSLog(@"Pick a desired number of moves:");
+//        scanf("%i", &numberOfMoves);
         
-        //Gets a desired length for the routine
-        int numberOfMoves;
-        NSLog(@"Pick a desired number of moves:");
-        scanf("%i", &numberOfMoves);
-        
-        //Sets up the dictionary with the correct moves
-        choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
-        [choreography setDanceStyle: danceStyle];            //sets dance style property
-        [choreography setDifficultyLevel: difficultyLevel];  //sets difficulty level property
-        [choreography setMovesDictionary];                     //sets the dictionary property
-
-//        //Sets up the dictionary with the correct moves --- FOR TESTING ONLY
+//        //Sets up the dictionary with the correct moves
 //        choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
-//        [choreography setDanceStyle: @"ChaCha"];            //sets dance style property
-//        [choreography setDifficultyLevel: @"Bronze"];       //sets difficulty level property
-//        [choreography setMovesDictionary];                    //sets the dictionary property
+//        [choreography setDanceStyle: danceStyle];            //sets dance style property
+//        [choreography setDifficultyLevel: difficultyLevel];  //sets difficulty level property
+//        [choreography setMovesDictionary];                     //sets the dictionary property
+
+        //Sets up the dictionary with the correct moves --- FOR TESTING ONLY
+        choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
+        [choreography setDanceStyle: @"ChaCha"];            //sets dance style property
+        [choreography setDifficultyLevel: @"Bronze"];       //sets difficulty level property
+        [choreography setMovesDictionary];                    //sets the dictionary property
 
         //Generates choreography, starting with a basic
-        NSMutableArray* choreographyArray = [[NSMutableArray alloc] init];
-        NSString * previousMove = @"closedBasic";
-        for (int i = 0; i < numberOfMoves; ++i) {
-            NSLog(@"%@", previousMove);
-            [choreographyArray addObject: previousMove]; //save the sequence
-            previousMove = [choreography chooseAMoveAfter: previousMove];
+        NSArray* moves = @[
+                           @"alemana",
+                           @"closedBasic",
+                           @"closedHipTwist",
+                           @"fan",
+                           @"handToHandLSP",
+                           @"handToHandRSP",
+                           @"hockeyStick",
+                           @"naturalOpeningOut",
+                           @"naturalTop",
+                           @"newYorkLSP",
+                           @"newYorkRSP",
+                           @"openBasic",
+                           @"shoulderToShoulderL",
+                           @"shoulderToShoulderR",
+                           @"sideStepLwithLF",
+                           @"sideStepLwithRF",
+                           @"sideStepRwithLF",
+                           @"sideStepRwithRF",
+                           @"spotTurnL",
+                           @"spotTurnR",
+                           @"switchTurnL",
+                           @"switchTurnR",
+                           @"thereAndBack",
+                           @"threeChasBack",
+                           @"threeChasForward",
+                           @"timeStepL",
+                           @"timeStepR",
+                           @"underarmTurnL",
+                           @"underarmTurnR"];
+//        NSArray* moves = @[
+//                           @"aida",
+//                           @"alemana",
+//                           @"chase",
+//                           @"closedBasic",
+//                           @"closedHipTwist",
+//                           @"crossBasic",
+//                           @"cubanBreakL",
+//                           @"cubanBreakR",
+//                           @"cubanBreakSplitL",
+//                           @"cubanBreakSplitR",
+//                           @"curl",
+//                           @"fan",
+//                           @"handToHandLSP",
+//                           @"handToHandRSP",
+//                           @"hockeyStick",
+//                           @"naturalOpeningOut",
+//                           @"naturalTop",
+//                           @"newYorkLSP",
+//                           @"newYorkRSP",
+//                           @"openBasic",
+//                           @"openHipTwist",
+//                           @"openingOutFromReverseTop",
+//                           @"reverseTop",
+//                           @"ropeSpinning",
+//                           @"shoulderToShoulderL",
+//                           @"shoulderToShoulderR",
+//                           @"sideStepLwithLF",
+//                           @"sideStepLwithRF",
+//                           @"sideStepRwithLF",
+//                           @"sideStepRwithRF",
+//                           @"spiral",
+//                           @"spotTurnL",
+//                           @"spotTurnR",
+//                           @"switchTurnL",
+//                           @"switchTurnR",
+//                           @"thereAndBack",
+//                           @"threeChasBack",
+//                           @"threeChasForward",
+//                           @"timeStepL",
+//                           @"timeStepR",
+//                           @"underarmTurnL",
+//                           @"underarmTurnR"];
+        
+        
+//        NSMutableArray* choreographyArray = [[NSMutableArray alloc] init];
+//        NSString * previousMove = @"closedBasic";
+//        for (int i = 0; i < 9; ++i) {
+//            NSLog(@"%@", previousMove);
+//            [choreographyArray addObject: previousMove]; //save the sequence
+//            previousMove = [choreography chooseAMoveAfter: previousMove];
+//        }
+        
+        for (int i=0; i<29; ++i) {
+            NSLog(@"Checking for typos in:");
+            NSLog(@"%@", moves[i]);
+            NSArray* resultArray = [choreography getNextArray: moves[i]];
+            NSUInteger sizeOfResultArray = [resultArray count];
+            
+            for (int j=0; j < sizeOfResultArray; ++j) {
+                NSLog(@"%@", resultArray[j]);
+                NSArray * possibleNext = [choreography getNextArray: resultArray[j]];
+                assert(possibleNext != nil);
         }
         
-        
+        }
     }
     return 0;
+    
 }
 
