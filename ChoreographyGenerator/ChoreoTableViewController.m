@@ -31,11 +31,13 @@
 //    [self.choreographyItems addObject:@"openBasic"];
 //    [self.choreographyItems addObject:@"spotTurnL"];
 //    [self.choreographyItems addObject:@"openBasic"];
+
+    
     
     //For testing -- For the app these should come from actual button presses
-    self.danceStyle = @"ChaCha";
-    self.difficultyLevel = @"Bronze";
-    self.numberOfMoves = 20;
+//    self.danceStyle = @"ChaCha";
+//    self.difficultyLevel = @"Bronze";
+//    self.numberOfMoves = 20;
     
     choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
     [choreography setDanceStyle: self.danceStyle];            //sets dance style property
@@ -48,7 +50,16 @@
         [self.choreographyItems addObject: previousMove]; //save the sequence
         previousMove = [choreography chooseAMoveAfter: previousMove];
     }
+    
+//    [self.tableView reloadData];
 
+}
+
+
+-(void)setGenerationFieldsWithStyle:(NSString *) style andLevel:(NSString *) level andNumberOfMoves: (int) moves{
+    self.danceStyle = style;
+    self.difficultyLevel = level;
+    self.numberOfMoves = moves;
 }
 
 //method declaration for segue
@@ -77,7 +88,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+
     }
     return self;
 }
@@ -86,7 +97,9 @@
 {
     [super viewDidLoad];
     
+    // initialize table's data array
     self.choreographyItems = [[NSMutableArray alloc] init];
+    
     
     [self loadChoreographyData];
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mdk-gm-wtz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mdk-gm-wtz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Choreo Table View Controller-->
+        <!--Choreo Table View Controller - Generated Choreography-->
         <scene sceneID="Ldv-I1-JM8">
             <objects>
                 <tableViewController id="GIB-RY-Kfw" customClass="ChoreoTableViewController" sceneMemberID="viewController">
@@ -27,11 +27,11 @@
                             <outlet property="delegate" destination="GIB-RY-Kfw" id="X26-De-1NP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TGK-U7-yLU"/>
+                    <navigationItem key="navigationItem" title="Generated Choreography" id="TGK-U7-yLU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9Q-r4-Y8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="16"/>
+            <point key="canvasLocation" x="1523" y="-323"/>
         </scene>
         <!--Select Dance View Controller-->
         <scene sceneID="4QA-In-rdq">
@@ -80,6 +80,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="didPressBronzeButton:" destination="a2F-Aq-eFG" eventType="touchUpInside" id="kpS-iW-xtj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F1c-eQ-Gd4">
                                 <rect key="frame" x="130" y="269" width="72" height="30"/>
@@ -93,6 +96,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="didPressBronzeButton:" destination="a2F-Aq-eFG" eventType="touchUpInside" id="Xwc-kW-jW4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lc-d3-UP2">
                                 <rect key="frame" x="204" y="269" width="72" height="30"/>
@@ -106,6 +112,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="didPressBronzeButton:" destination="a2F-Aq-eFG" eventType="touchUpInside" id="V8Y-if-R7j"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="01p-2s-dv8">
                                 <rect key="frame" x="95" y="336" width="130" height="30"/>
@@ -120,6 +129,9 @@
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="a2F-Aq-eFG" id="REc-Rt-4Mr"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="soY-PE-zdO">
                                 <rect key="frame" x="103" y="393" width="115" height="30"/>
@@ -135,7 +147,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="GIB-RY-Kfw" kind="push" id="BTB-uB-AEI"/>
+                                    <segue destination="GIB-RY-Kfw" kind="push" identifier="Generate" id="BTB-uB-AEI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Dance Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twd-pw-AAd">
@@ -150,12 +162,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="c1N-i5-Fb1"/>
                     <connections>
+                        <outlet property="bronzeButton" destination="eBU-Pn-yJA" id="RCa-2F-Mwv"/>
                         <outlet property="dancePicker" destination="B9e-1i-XHW" id="xfk-Hg-I1A"/>
+                        <outlet property="goldButton" destination="1lc-d3-UP2" id="Sw2-Jz-rgV"/>
+                        <outlet property="numberOfMovesField" destination="01p-2s-dv8" id="IZE-5Y-KuQ"/>
+                        <outlet property="silverButton" destination="F1c-eQ-Gd4" id="fnb-oB-u2H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68q-nh-cFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1487" y="-84"/>
+            <point key="canvasLocation" x="627" y="-323"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SCj-9O-xIR">
@@ -173,25 +189,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNf-hb-1Aa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970" y="-67"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Q1c-0J-FR5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R5D-n5-8cP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvU-kx-OuK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GIB-RY-Kfw" kind="relationship" relationship="rootViewController" id="I4D-tP-QNi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SFq-su-gDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4" y="16"/>
+            <point key="canvasLocation" x="15" y="-383"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -199,7 +197,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="I4D-tP-QNi"/>
-    </inferredMetricsTieBreakers>
 </document>

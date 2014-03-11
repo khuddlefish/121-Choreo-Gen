@@ -19,6 +19,15 @@
 //properties that will be determined by user input
 @property NSString *selectedStyle;
 @property NSString *selectedLevel;
+@property IBOutlet UITextField *numberOfMovesField;
 @property int numMoves;
+
+@property IBOutlet UIButton *bronzeButton;
+@property IBOutlet UIButton *silverButton;
+@property IBOutlet UIButton *goldButton;
+
+-(IBAction) didPressBronzeButton: (id) sender;
+-(IBAction) didPressSilverButton;
+-(IBAction) didPressGoldButton;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SelectDanceViewController.h"
+#import "ChoreoTableViewController.h"
 
 @interface SelectDanceViewController ()
 
@@ -67,13 +68,66 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-   
+    self.selectedStyle = self.danceNames[component];
 }
 
 //sets navigation bar to be hidden
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden = YES;
+}
+
+//virtual keyboard disappears on return
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (self.numberOfMovesField.isFirstResponder) {
+        [self.numberOfMovesField resignFirstResponder];
+    }
+    
+    return YES;
+}
+
+
+-(void) didPressBronzeButton: (id) sender{
+    if (sender==self.bronzeButton) {
+        self.selectedLevel = @"Bronze";
+
+    }
+    
+    if (sender==self.silverButton) {
+        self.selectedLevel = @"Silver";
+        
+    }
+
+    if (sender==self.goldButton) {
+        self.selectedLevel = @"Gold";
+        
+    }
+
+
+}
+
+-(void) didPressSilverButton{
+    self.selectedLevel = @"Silver";
+}
+-(void) didPressGoldButton{
+    self.selectedLevel = @"Gold";
+}
+
+
+//segue to choreo view
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Generate"]) {
+        
+        self.numMoves = [self.numberOfMovesField.text intValue];
+                
+        //UINavigationController *navigationController = segue.destinationViewController;
+        ChoreoTableViewController *choreoGenVC = segue.destinationViewController;
+        [choreoGenVC setGenerationFieldsWithStyle:self.selectedStyle andLevel:self.selectedLevel andNumberOfMoves:self.numMoves];
+
+        
+    }
 }
 
 @end
