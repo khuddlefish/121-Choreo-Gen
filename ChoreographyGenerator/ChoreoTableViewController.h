@@ -14,4 +14,7 @@
 //declaration for segue
 //- (IBAction)generateDance:(UIStoryboardSegue *)segue;
 
+-(void)setGenerationFieldsWithStyle:(NSString *) style andLevel:(NSString *) level andNumberOfMoves: (int) moves;
+- (void) loadChoreographyData;
+
 @end
