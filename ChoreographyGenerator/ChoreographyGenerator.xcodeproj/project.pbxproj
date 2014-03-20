@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D97C5F818DBB30C00C38A65 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D97C5F718DBB30C00C38A65 /* Database.m */; };
+		1D97C5FA18DBB37500C38A65 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D97C5F918DBB37500C38A65 /* libsqlite3.dylib */; };
 		9CFA22C218C03F2F000B273B /* SelectDanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */; };
 		E18A874218BACFD200608548 /* chaChaBronze.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874118BACFD200608548 /* chaChaBronze.m */; };
 		E18A874518BAD7B000608548 /* chaChaSilver.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874418BAD7B000608548 /* chaChaSilver.m */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D97C5F618DBB30C00C38A65 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		1D97C5F718DBB30C00C38A65 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		1D97C5F918DBB37500C38A65 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9CFA22C018C03F2F000B273B /* SelectDanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDanceViewController.h; sourceTree = "<group>"; };
 		9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDanceViewController.m; sourceTree = "<group>"; };
 		E18A874018BACFC000608548 /* chaChaBronze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chaChaBronze.h; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D97C5FA18DBB37500C38A65 /* libsqlite3.dylib in Frameworks */,
 				E190D7D818B6887800A83A01 /* CoreGraphics.framework in Frameworks */,
 				E190D7DA18B6887800A83A01 /* UIKit.framework in Frameworks */,
 				E190D7D618B6887800A83A01 /* Foundation.framework in Frameworks */,
@@ -113,6 +119,7 @@
 		E190D7D418B6887800A83A01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D97C5F918DBB37500C38A65 /* libsqlite3.dylib */,
 				E190D7D518B6887800A83A01 /* Foundation.framework */,
 				E190D7D718B6887800A83A01 /* CoreGraphics.framework */,
 				E190D7D918B6887800A83A01 /* UIKit.framework */,
@@ -124,6 +131,8 @@
 		E190D7DB18B6887800A83A01 /* ChoreographyGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				1D97C5F618DBB30C00C38A65 /* Database.h */,
+				1D97C5F718DBB30C00C38A65 /* Database.m */,
 				E1F45E8A18B85DCE00768853 /* Main.storyboard */,
 				E190D7E418B6887800A83A01 /* AppDelegate.h */,
 				E190D7E518B6887800A83A01 /* AppDelegate.m */,
@@ -270,6 +279,7 @@
 			files = (
 				E190D7E618B6887800A83A01 /* AppDelegate.m in Sources */,
 				E1F45E9118B8609D00768853 /* ChoreoTableViewController.m in Sources */,
+				1D97C5F818DBB30C00C38A65 /* Database.m in Sources */,
 				E190D7E218B6887800A83A01 /* main.m in Sources */,
 				E18A874218BACFD200608548 /* chaChaBronze.m in Sources */,
 				9CFA22C218C03F2F000B273B /* SelectDanceViewController.m in Sources */,
