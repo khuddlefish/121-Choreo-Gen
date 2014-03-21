@@ -89,19 +89,18 @@
     return valuesForClosedBasic;
 }
 
-+ (NSArray*) valuesArrayForChaChaBronze_closedHipTwist
+
++ (NSArray*) valuesArrayForChaChaBronze_openBasic
 {
-    NSArray *valuesForClosedHipTwist = @[
-                                         @"alemana",
-                                         @"hockeyStick",
-                                         @"openBasic",
-                                         @"timeStepL",
-                                         @"newYorkLSP",
-                                         @"spotTurnR",
-                                         @"switchTurnR",
-                                         @"underarmTurnL",
-                                         @"threeChasForward"];
-    return valuesForClosedHipTwist;
+    NSArray *valuesForOpenBasic = @[
+                                    @"fan",
+                                    @"closedBasic",
+                                    @"openBasic",
+                                    @"threeChasBack",
+                                    @"naturalTop",
+                                    @"threeChasForward",
+                                    @"alemana"];
+    return valuesForOpenBasic;
 }
 
 + (NSArray*) valuesArrayForChaChaBronze_fan
@@ -111,6 +110,9 @@
                               @"hockeyStick"];
     return valuesForFan;
 }
+
+
+
 
 + (NSArray*) valuesArrayForChaChaBronze_handToHandLSP
 {
@@ -149,6 +151,22 @@
                                         @"closedHipTwist"];
     return valuesForHandToHandRSP;
 }
+
++ (NSArray*) valuesArrayForChaChaBronze_closedHipTwist
+{
+    NSArray *valuesForClosedHipTwist = @[
+                                         @"alemana",
+                                         @"hockeyStick",
+                                         @"openBasic",
+                                         @"timeStepL",
+                                         @"newYorkLSP",
+                                         @"spotTurnR",
+                                         @"switchTurnR",
+                                         @"underarmTurnL",
+                                         @"threeChasForward"];
+    return valuesForClosedHipTwist;
+}
+
 
 + (NSArray*) valuesArrayForChaChaBronze_hockeyStick
 {
@@ -225,18 +243,6 @@
     return valuesForNewYorkRSP;
 }
 
-+ (NSArray*) valuesArrayForChaChaBronze_openBasic
-{
-    NSArray *valuesForOpenBasic = @[
-                                    @"fan",
-                                    @"closedBasic",
-                                    @"openBasic",
-                                    @"threeChasBack",
-                                    @"naturalTop",
-                                    @"threeChasForward",
-                                    @"alemana"];
-    return valuesForOpenBasic;
-}
 
 + (NSArray*) valuesArrayForChaChaBronze_shoulderToShoulderL
 {
