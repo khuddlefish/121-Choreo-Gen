@@ -10,11 +10,4 @@
 
 @implementation DanceMove
 
-//include move id? so can save routine eventually
--(id)initWithName:(NSString *)name andDescription:(NSString *)description
-{
-    self.name = name;
-    self.description = description;
-    return self;
-}
 @end

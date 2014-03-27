@@ -15,9 +15,6 @@
 + (void)createEditableCopyOfDatabaseIfNeeded;
 + (void)initDatabase;
 
-+ (NSMutableArray *)generateRoutine;
-+ (NSMutableArray *)fetchRoutineMoves;
-
 + (void)cleanUpDatabaseForQuit;
 
 @end
