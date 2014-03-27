@@ -10,4 +10,11 @@
 
 @interface DanceMove : NSObject
 
+@property NSString *name;
+@property NSString *description;
+@property NSString *id;
+
+-(id)initWithId:(NSString *) id andName: (NSString *)name andDescription:(NSString *)description;
+
+
 @end
