@@ -23,10 +23,6 @@ DROP DATABASE IF EXISTS choreographydb;
 
 CREATE DATABASE choreographydb;
 
-<<<<<<< HEAD
---not sure about this
-=======
->>>>>>> newbranch
 GRANT ALL PRIVILEGES ON choreographydb.* to usr@localhost IDENTIFIED BY 'allowme'; 
 
 USE choreographydb;
@@ -1254,11 +1250,7 @@ INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (02
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (03, "Gold", "hipTwistOpen", "hipTwistSpiral" );
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (04, "Gold", "hipTwistOpen", "basicOpen" );
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (05, "Gold", "hipTwistOpen", "timeStepL" );
-<<<<<<< HEAD
-INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (05, "Gold", "hipTwistOpen", "hipTwistOpen" );
-=======
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (06, "Gold", "hipTwistOpen", "hipTwistOpen" );
->>>>>>> newbranch
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (07, "Gold", "hipTwistOpen", "curl" );
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (08, "Gold", "hipTwistOpen", "cubanBreakL" );
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (09, "Gold", "hipTwistOpen", "cubanBreakSplitL" );
