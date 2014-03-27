@@ -12,8 +12,13 @@
 
 @interface Database : NSObject
 
+
+@property NSString *selectedStyle;
+@property NSString *selectedLevel;
+@property int *selectedNumberOfMoves;
+
 + (void)createEditableCopyOfDatabaseIfNeeded;
-+ (void)initDatabase;
+- (void)initDatabase;
 
 + (void)cleanUpDatabaseForQuit;
 
