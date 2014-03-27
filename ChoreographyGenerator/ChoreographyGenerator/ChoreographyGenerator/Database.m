@@ -36,7 +36,7 @@ static sqlite3_stmt *fetchMove;
     if (success) return;
     
     // if failed to find one, copy the empty choreo database into the location
-    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"chaCha.sql"];
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"choreography.sql"];
     success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
     if (!success) {
         NSAssert1(0, @"FAILED to create writable database file with message, '%@'.", [error localizedDescription]);
@@ -59,12 +59,12 @@ static sqlite3_stmt *fetchMove;
     //hard code routine pre-sets for now
     self.selectedStyle = @"ChaCha";
     self.selectedLevel = @"Silver";
-    self.selectedNumberOfMoves = 4;    
+    self.selectedNumberOfMoves = 4;
     
 
     
     //generate next move--level should be passed as a constant to this class
-    char *selectNextMoveString = "SELECT next_move_id FROM Move_Seq_ChaCha WHERE level=%@, move_id=%@, preference=%@", level, move, pref;
+    char *selectNextMoveString = "SELECT next_move_id FROM Move_Seq_ChaCha WHERE level=%@, move_id=%@, preference=%@", [self selectedLevel], move, pref;
     
     
     if (sqlite3_prepare_v2(db, selectNextMoveString, -1, &selectNextMove, NULL) != SQLITE_OK) {
@@ -114,7 +114,7 @@ static sqlite3_stmt *fetchMove;
     //NSString *tempDesc = [NSString stringWithUTF8String:descChars];
     
     //create Move object
-    //DanceMove *temp = [[DanceMove alloc] initWithName:tempName andDescription:tempDesc];
+    //DanceMove *temp = [[DanceMove alloc] initWithId: id andName:tempName andDescription:tempDesc];
     //[routine addObject:temp];
     
     
