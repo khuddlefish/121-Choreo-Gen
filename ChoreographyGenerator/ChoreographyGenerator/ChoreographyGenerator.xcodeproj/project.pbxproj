@@ -11,9 +11,7 @@
 		1D97C5FA18DBB37500C38A65 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D97C5F918DBB37500C38A65 /* libsqlite3.dylib */; };
 		1D97C5FD18DBB65800C38A65 /* chaChaGold.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D97C5FC18DBB65800C38A65 /* chaChaGold.m */; };
 		1D97C60118DBB6AF00C38A65 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D97C5FF18DBB6AF00C38A65 /* README.md */; };
-		1D97C60618DBCC2F00C38A65 /* DanceMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D97C60518DBCC2F00C38A65 /* DanceMove.m */; };
 		9CFA22C218C03F2F000B273B /* SelectDanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */; };
-		E15ED55C18DBA0E00000C97E /* chaChaGold.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED55B18DBA0E00000C97E /* chaChaGold.m */; };
 		E18A874218BACFD200608548 /* chaChaBronze.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874118BACFD200608548 /* chaChaBronze.m */; };
 		E18A874518BAD7B000608548 /* chaChaSilver.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874418BAD7B000608548 /* chaChaSilver.m */; };
 		E190D7D618B6887800A83A01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190D7D518B6887800A83A01 /* Foundation.framework */; };
@@ -51,12 +49,8 @@
 		1D97C5FB18DBB65800C38A65 /* chaChaGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chaChaGold.h; sourceTree = "<group>"; };
 		1D97C5FC18DBB65800C38A65 /* chaChaGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chaChaGold.m; sourceTree = "<group>"; };
 		1D97C5FF18DBB6AF00C38A65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		1D97C60418DBCC2F00C38A65 /* DanceMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DanceMove.h; sourceTree = "<group>"; };
-		1D97C60518DBCC2F00C38A65 /* DanceMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceMove.m; sourceTree = "<group>"; };
 		9CFA22C018C03F2F000B273B /* SelectDanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDanceViewController.h; sourceTree = "<group>"; };
 		9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDanceViewController.m; sourceTree = "<group>"; };
-		E15ED55A18DBA0E00000C97E /* chaChaGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chaChaGold.h; sourceTree = "<group>"; };
-		E15ED55B18DBA0E00000C97E /* chaChaGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chaChaGold.m; sourceTree = "<group>"; };
 		E18A874018BACFC000608548 /* chaChaBronze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chaChaBronze.h; sourceTree = "<group>"; };
 		E18A874118BACFD200608548 /* chaChaBronze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chaChaBronze.m; sourceTree = "<group>"; };
 		E18A874318BAD7A000608548 /* chaChaSilver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chaChaSilver.h; sourceTree = "<group>"; };
@@ -145,20 +139,13 @@
 			isa = PBXGroup;
 			children = (
 				1D97C5FF18DBB6AF00C38A65 /* README.md */,
-<<<<<<< HEAD
-=======
 				E19AD6D518E4A943000F2E95 /* choreography.sql */,
 				1D97C5F618DBB30C00C38A65 /* Database.h */,
 				1D97C5F718DBB30C00C38A65 /* Database.m */,
->>>>>>> c4ade9cd639eaa5cf290b41fdf488e288139d6f2
 				E1F45E8A18B85DCE00768853 /* Main.storyboard */,
 				E190D7E418B6887800A83A01 /* AppDelegate.h */,
 				E190D7E518B6887800A83A01 /* AppDelegate.m */,
 				E190D7E718B6887800A83A01 /* Images.xcassets */,
-				1D97C5F618DBB30C00C38A65 /* Database.h */,
-				1D97C5F718DBB30C00C38A65 /* Database.m */,
-				1D97C60418DBCC2F00C38A65 /* DanceMove.h */,
-				1D97C60518DBCC2F00C38A65 /* DanceMove.m */,
 				9CFA22C018C03F2F000B273B /* SelectDanceViewController.h */,
 				9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */,
 				E1F45E8E18B8609D00768853 /* ChoreoTableViewController.h */,
@@ -169,13 +156,8 @@
 				E18A874118BACFD200608548 /* chaChaBronze.m */,
 				E18A874318BAD7A000608548 /* chaChaSilver.h */,
 				E18A874418BAD7B000608548 /* chaChaSilver.m */,
-<<<<<<< HEAD
-				E15ED55A18DBA0E00000C97E /* chaChaGold.h */,
-				E15ED55B18DBA0E00000C97E /* chaChaGold.m */,
-=======
 				1D97C5FB18DBB65800C38A65 /* chaChaGold.h */,
 				1D97C5FC18DBB65800C38A65 /* chaChaGold.m */,
->>>>>>> 6dacc1cfb8748a7037d93d9beefbbfbe347caa3c
 				E190D7DC18B6887800A83A01 /* Supporting Files */,
 			);
 			path = ChoreographyGenerator;
@@ -312,11 +294,9 @@
 				E1F45E9118B8609D00768853 /* ChoreoTableViewController.m in Sources */,
 				1D97C5F818DBB30C00C38A65 /* Database.m in Sources */,
 				1D97C5FD18DBB65800C38A65 /* chaChaGold.m in Sources */,
-				1D97C60618DBCC2F00C38A65 /* DanceMove.m in Sources */,
 				E190D7E218B6887800A83A01 /* main.m in Sources */,
 				E18A874218BACFD200608548 /* chaChaBronze.m in Sources */,
 				9CFA22C218C03F2F000B273B /* SelectDanceViewController.m in Sources */,
-				E15ED55C18DBA0E00000C97E /* chaChaGold.m in Sources */,
 				E18A874518BAD7B000608548 /* chaChaSilver.m in Sources */,
 				E1F45E9018B8609D00768853 /* choreographyDictionary.m in Sources */,
 			);
