@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E0D683C3-8D2B-4E80-ACA9-D4E34D569E2F</string>
+	<string>519AB448-AAA8-42A3-AD03-6C9531755B3E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ChoreographyGenerator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9AB5ED18-B976-485C-95CB-2F93CF59290B</key>
-		<string>https://github.com/khuddlefish/121-Choreo-Gen.git</string>
+		<key>448DF908-DFA5-41FF-8020-BC56A0BDB111</key>
+		<string>https://github.com/khuddlefish/121-Choreo-Gen</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ChoreographyGenerator/ChoreographyGenerator.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9AB5ED18-B976-485C-95CB-2F93CF59290B</key>
+		<key>448DF908-DFA5-41FF-8020-BC56A0BDB111</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/khuddlefish/121-Choreo-Gen.git</string>
+	<string>https://github.com/khuddlefish/121-Choreo-Gen</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9AB5ED18-B976-485C-95CB-2F93CF59290B</string>
+	<string>448DF908-DFA5-41FF-8020-BC56A0BDB111</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9AB5ED18-B976-485C-95CB-2F93CF59290B</string>
+			<string>448DF908-DFA5-41FF-8020-BC56A0BDB111</string>
 			<key>IDESourceControlWCCName</key>
 			<string>121-Choreo-Gen</string>
 		</dict>
