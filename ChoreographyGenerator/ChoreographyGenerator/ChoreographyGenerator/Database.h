@@ -20,10 +20,6 @@
 + (void)createEditableCopyOfDatabaseIfNeeded;
 - (void)initDatabase;
 
-+ (NSMutableArray *)generateRoutine;
-+ (NSMutableArray *)fetchRoutineMoves;
--(NSMutableArray *) testingGiveRoutineArray;
-
 + (void)cleanUpDatabaseForQuit;
 
 @end

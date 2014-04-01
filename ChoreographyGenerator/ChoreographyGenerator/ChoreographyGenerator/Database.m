@@ -8,7 +8,6 @@
 
 #import "Database.h"
 #import <sqlite3.h>
-#import "DanceMove.h"
 
 @interface Database()
 
@@ -65,7 +64,7 @@ static sqlite3_stmt *fetchMove;
 
     
     //generate next move--level should be passed as a constant to this class
-    char *selectNextMoveString = "SELECT next_move_id FROM Move_Seq_ChaCha WHERE level=%@, move_id=%@, preference=%@", self.selectedLevel, move, pref;
+    char *selectNextMoveString = "SELECT next_move_id FROM Move_Seq_ChaCha WHERE level=%@, move_id=%@, preference=%@", [self selectedLevel], move, pref;
     
     
     if (sqlite3_prepare_v2(db, selectNextMoveString, -1, &selectNextMove, NULL) != SQLITE_OK) {
@@ -93,7 +92,7 @@ static sqlite3_stmt *fetchMove;
     //NSString *temp = resulting move id
     //[routine addObject: temp];
     
-    sqlite3_reset(selectNextMove);
+    
     return routine;
 }
 
@@ -121,31 +120,9 @@ static sqlite3_stmt *fetchMove;
     
     
     sqlite3_reset(fetchMove);
-    
     return routine;
 }
 
-
-//TESTING METHOD: for making sure that this class can communicate properly with ChoreoTableViewController
--(NSMutableArray *) testingGiveRoutineArray{
-    NSMutableArray *routine = [NSMutableArray arrayWithCapacity:0];
-    
-    //create Move object
-    DanceMove *one = [[DanceMove alloc] initWithId: @"aida" andName: @"Aida" andDescription:@"This move is awesome."];
-    [routine addObject:one];
-    DanceMove *two = [[DanceMove alloc] initWithId: @"basic" andName: @"ChaCha Basic" andDescription:@"This move is super easy, like lol."];
-    [routine addObject:two];
-    DanceMove *three = [[DanceMove alloc] initWithId: @"alemana" andName: @"Alemana" andDescription:@"This move is really fun."];
-    [routine addObject:three];
-    DanceMove *four = [[DanceMove alloc] initWithId: @"newyorker" andName: @"New Yorker" andDescription:@"This move is quite flashy."];
-    [routine addObject:four];
-    DanceMove *five = [[DanceMove alloc] initWithId: @"aida" andName: @"Aida" andDescription:@"This move is awesome."];
-    [routine addObject:five];
-    
-    
-    return routine;
-    
-}
 
 
 + (void)cleanUpDatabaseForQuit
