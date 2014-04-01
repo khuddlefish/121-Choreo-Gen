@@ -15,10 +15,19 @@
 
 @property NSString *selectedStyle;
 @property NSString *selectedLevel;
-@property int *selectedNumberOfMoves;
+@property int selectedNumberOfMoves;
 
 + (void)createEditableCopyOfDatabaseIfNeeded;
 - (void)initDatabase;
+
+- (int) randomizePreference: (NSString*) move;
+- (NSString*) getMoveAfter: (NSString*) move withPreference: (int) preference;
+- (NSString*) getMoveInformation: (NSString*)move;
+
++ (NSMutableArray *) generateRoutine;
++ (NSMutableArray *) generateRoutineStartingWith: (NSString*) move;
+
++ (NSMutableArray *)fetchRoutineMoves;
 
 + (void)cleanUpDatabaseForQuit;
 
