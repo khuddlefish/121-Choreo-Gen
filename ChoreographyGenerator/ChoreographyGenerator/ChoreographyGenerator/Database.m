@@ -11,8 +11,6 @@
 
 @interface Database()
 
-@property int numberOfMovesAfter;
-
 @end
 
 
@@ -49,7 +47,6 @@ static sqlite3_stmt *fetchMove;
 
 - (void)initDatabase {
     
-    
     // create the path to the database
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
@@ -60,46 +57,87 @@ static sqlite3_stmt *fetchMove;
         NSLog(@"ERROR opening the db");
     }
     
-
-    
 }
 
 - (int) randomizePreference: (NSString*) move {
     
-    char *moveCharacters = [move UTF8String];
+    NSString *currentLevel = [self selectedLevel];
+    int count = 0;
     
     //get the preference
-    char *nextMovePreferenceString = "SELECT COUNT(*) FROM Move_Seq_ChaCha WHERE level=%@, move_id=%@",self.selectedLevel, *moveCharacters;
+     NSString *nextMovePreferenceString = [NSString stringWithFormat: @"SELECT COUNT(*) FROM Move_Seq_ChaCha WHERE level=%@ AND move_id=%@", currentLevel, move];
     
-    if (sqlite3_prepare_v2(db, nextMovePreferenceString, -1, &nextMovePreference, NULL) != SQLITE_OK) {
-        NSLog(@"ERROR: failed to generate prefernce for next move statement");
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(db, [nextMovePreferenceString UTF8String], -1, &statement, nil) == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            
+            count = sqlite3_column_int(statement, 0);
+            
+            //randomize choosing 1 to count
+        }
     }
+    
+    else {
+        NSLog(@"ERROR: failed to generate preference for next move statement");
+    }
+    
+    sqlite3_finalize(statement);
+    return count;
 }
 
 - (NSString*) getMoveAfter: (NSString*) move withPreference: (int) preference {
     
-    char *moveCharacters = [move UTF8String];
+    NSString *currentLevel = [self selectedLevel];
+    NSString *nextMoveIDString;
     
     //generate next move--level should be passed as a constant to this class
-    char *selectNextMoveString = "SELECT next_move_id FROM Move_Seq_ChaCha WHERE level=%@, move_id=%@, preference=%@", [self selectedLevel], moveCharacters, preference;
+    NSString *selectNextMoveString = [NSString stringWithFormat: @"SELECT next_move_id FROM Move_Seq_ChaCha WHERE level=%@ AND move_id=%@ AND preference=%d", currentLevel, move, preference];
     
-    if (sqlite3_prepare_v2(db, selectNextMoveString, -1, &selectNextMove, NULL) != SQLITE_OK) {
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(db, [selectNextMoveString UTF8String], -1, &statement, nil) == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            char *nextMoveID = (char*) sqlite3_column_text(statement, 0);
+            nextMoveIDString= [NSString stringWithUTF8String:nextMoveID];
+        }
+
+    }
+    else {
         NSLog(@"ERROR: failed to prepare generate next move statement");
     }
     
-    return selectNextMoveString;
+    sqlite3_finalize(statement);
+    return nextMoveIDString;
 }
 
-- (NSString*) getMoveInformation: (NSString*)move {
+
+- (DanceMove*) getMoveInformation: (NSString*) move {
+    NSString *moveNameString;
+    NSString *moveDescString;
+    DanceMove *moveInfo;
     
-    char *moveCharacters = [move UTF8String];
     
     //fetch a move's stuff
-    char *fetchMoveString = "SELECT move_name, move_desc FROM Moves_ChaCha WHERE move_id=%@", moveCharacters;
+    NSString *fetchMoveString = [NSString stringWithFormat:@"SELECT move_name, move_desc FROM Moves_ChaCha WHERE move_id=%@", move];
     
-    if (sqlite3_prepare_v2(db, fetchMoveString, -1, &fetchMove, NULL) != SQLITE_OK) {
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(db, [fetchMoveString UTF8String], -1, &statement, nil) == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            char *moveName = (char*) sqlite3_column_text(statement, 0);
+            char *moveDesc = (char*) sqlite3_column_text(statement, 1);
+            moveNameString = [NSString stringWithUTF8String:moveName];
+            moveDescString = [NSString stringWithUTF8String:moveDesc];
+            
+            //create Move object
+            moveInfo = [[DanceMove alloc] initWithId: move andName:moveNameString andDescription:moveDescString];
+
+        }
+    }
+    
+    else {
         NSLog(@"ERROR: failed to prepare move fetching statement");
     }
+    
+    return moveInfo;
 }
 
 
@@ -118,8 +156,7 @@ static sqlite3_stmt *fetchMove;
     [ChaChaDB initDatabase];
     
     //Start with a basic
-    NSString* move = "basicOpen";
-    char *moveCharacters = [move UTF8String];
+    NSString* move = @"basicOpen";
     
     //loop
     for (int i =0; i<ChaChaDB.selectedNumberOfMoves; ++i) {
@@ -136,12 +173,12 @@ static sqlite3_stmt *fetchMove;
 }
 
 
-+ (NSMutableArray *) generateRoutineStartingWith: (char*) move{
++ (NSMutableArray *) generateRoutineStartingWith: (NSString*) move{
     NSMutableArray *routine = [NSMutableArray arrayWithCapacity:0];
     //init database
     
     //Start with a basic
-    char* move = "basicOpen";
+    //char *move = @"basicOpen";
     //loop
     //generate next preference
     //sqlite3_step(selectNextMove) with new preference, previous move (temp)
@@ -185,8 +222,8 @@ static sqlite3_stmt *fetchMove;
 + (void)cleanUpDatabaseForQuit
 {
     // finalize frees the compiled statements, close closes the database connection
-    sqlite3_finalize(selectNextMove);
-    sqlite3_finalize(fetchMove);
+//    sqlite3_finalize(selectNextMove);
+//    sqlite3_finalize(fetchMove);
     sqlite3_close(db);
 }
 

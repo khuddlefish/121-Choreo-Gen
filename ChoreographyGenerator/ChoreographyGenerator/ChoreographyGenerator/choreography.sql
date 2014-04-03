@@ -19,18 +19,18 @@ USE choreographydb;
 
 -- Creating tables
 CREATE TABLE Moves_ChaCha(	
-	move_id VARCHAR(256) NOT NULL,
-	move_name VARCHAR(256) NOT NULL,
-	move_desc VARCHAR(256) NOT NULL,
+	move_id TEXT NOT NULL,
+	move_name TEXT NOT NULL,
+	move_desc TEXT NOT NULL,
 	UNIQUE (move_name),
 	PRIMARY KEY (move_id)
 );
 
 CREATE TABLE Move_Seq_ChaCha(
 	preference INTEGER NOT NULL,
-	level VARCHAR(256) NOT NULL,
-	move_id VARCHAR(256) NOT NULL,
-	next_move_id VARCHAR(256) NOT NULL,
+	level TEXT NOT NULL,
+	move_id TEXT NOT NULL,
+	next_move_id TEXT NOT NULL,
 	PRIMARY KEY (preference, level, move_id),
 	FOREIGN KEY (move_id) REFERENCES Moves_ChaCha(move_id),
 	FOREIGN KEY (next_move_id) REFERENCES Moves_ChaCha(move_id)

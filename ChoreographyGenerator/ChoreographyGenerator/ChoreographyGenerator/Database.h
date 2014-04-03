@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import <sqlite3.h>
+#import "DanceMove.h"
 
 @interface Database : NSObject
 
@@ -22,7 +23,7 @@
 
 - (int) randomizePreference: (NSString*) move;
 - (NSString*) getMoveAfter: (NSString*) move withPreference: (int) preference;
-- (NSString*) getMoveInformation: (NSString*)move;
+- (DanceMove*) getMoveInformation: (NSString*)move;
 
 + (NSMutableArray *) generateRoutine;
 + (NSMutableArray *) generateRoutineStartingWith: (NSString*) move;
