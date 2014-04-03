@@ -137,6 +137,7 @@ static sqlite3_stmt *fetchMove;
         NSLog(@"ERROR: failed to prepare move fetching statement");
     }
     
+    sqlite3_finalize(statement);
     return moveInfo;
 }
 
@@ -165,26 +166,33 @@ static sqlite3_stmt *fetchMove;
         move = [ChaChaDB getMoveAfter:move withPreference:pref];
     }
     
-    //sqlite3_step(selectNextMove) with new preference, previous move (temp)
-    //NSString *temp = resulting move id
-    //[routine addObject: temp];
+    [ChaChaDB cleanUpDatabaseForQuit];
     
     return routine;
 }
 
 
-+ (NSMutableArray *) generateRoutineStartingWith: (NSString*) move{
++ (NSMutableArray *) generateRoutineStartingWith: (NSString*) move {
     NSMutableArray *routine = [NSMutableArray arrayWithCapacity:0];
+    
     //init database
+    Database *ChaChaDB = [Database new];
     
-    //Start with a basic
-    //char *move = @"basicOpen";
+    //hard code routine pre-sets for now
+    ChaChaDB.selectedStyle = @"ChaCha";
+    ChaChaDB.selectedLevel = @"Silver";
+    ChaChaDB.selectedNumberOfMoves = 4;
+    
+    [ChaChaDB initDatabase];
+    
     //loop
-    //generate next preference
-    //sqlite3_step(selectNextMove) with new preference, previous move (temp)
-    //NSString *temp = resulting move id
-    //[routine addObject: temp];
+    for (int i =0; i<ChaChaDB.selectedNumberOfMoves; ++i) {
+        [routine addObject:move];
+        int pref = [ChaChaDB randomizePreference:move];
+        move = [ChaChaDB getMoveAfter:move withPreference:pref];
+    }
     
+    [ChaChaDB cleanUpDatabaseForQuit];
     
     return routine;
 }
@@ -219,7 +227,7 @@ static sqlite3_stmt *fetchMove;
 
 
 
-+ (void)cleanUpDatabaseForQuit
+- (void)cleanUpDatabaseForQuit
 {
     // finalize frees the compiled statements, close closes the database connection
 //    sqlite3_finalize(selectNextMove);

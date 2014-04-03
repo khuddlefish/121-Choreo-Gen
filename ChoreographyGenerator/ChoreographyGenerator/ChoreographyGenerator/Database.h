@@ -30,6 +30,6 @@
 
 + (NSMutableArray *)fetchRoutineMoves;
 
-+ (void)cleanUpDatabaseForQuit;
+- (void)cleanUpDatabaseForQuit;
 
 @end
