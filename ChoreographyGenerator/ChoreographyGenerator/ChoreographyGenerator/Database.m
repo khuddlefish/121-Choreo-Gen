@@ -68,7 +68,7 @@ static sqlite3_stmt *fetchMove;
      NSString *nextMovePreferenceString = [NSString stringWithFormat: @"SELECT COUNT(*) FROM Move_Seq_ChaCha WHERE level=%@ AND move_id=%@", currentLevel, move];
     
     sqlite3_stmt *statement;
-    if (sqlite3_prepare_v2(db, [nextMovePreferenceString UTF8String], -1, &statement, nil) == SQLITE_OK) {
+    if 	(sqlite3_prepare_v2(db, [nextMovePreferenceString UTF8String], -1, &statement, nil) == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
             
             count = sqlite3_column_int(statement, 0);
@@ -222,6 +222,26 @@ static sqlite3_stmt *fetchMove;
     
     
     sqlite3_reset(fetchMove);
+    return routine;
+}
+
+- (NSMutableArray *) testingGiveRoutineArray{
+    
+    NSMutableArray *routine = [NSMutableArray arrayWithCapacity:0];
+    
+    //create Move object
+    DanceMove *one = [[DanceMove alloc] initWithId: @"aida" andName: @"Aida" andDescription:@"This move is awesome."];
+    [routine addObject:one];
+    DanceMove *two = [[DanceMove alloc] initWithId: @"basic" andName: @"ChaCha Basic" andDescription:@"This move is super easy, like lol."];
+    [routine addObject:two];
+    DanceMove *three = [[DanceMove alloc] initWithId: @"alemana" andName: @"Alemana" andDescription:@"This move is really fun."];
+    [routine addObject:three];
+    DanceMove *four = [[DanceMove alloc] initWithId: @"newyorker" andName: @"New Yorker" andDescription:@"This move is quite flashy."];
+    [routine addObject:four];
+    DanceMove *five = [[DanceMove alloc] initWithId: @"aida" andName: @"Aida" andDescription:@"This move is awesome."];
+    [routine addObject:five];
+    
+    
     return routine;
 }
 
