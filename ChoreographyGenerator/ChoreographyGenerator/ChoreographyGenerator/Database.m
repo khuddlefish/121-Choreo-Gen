@@ -225,7 +225,7 @@ static sqlite3_stmt *fetchMove;
     return routine;
 }
 
-- (NSMutableArray *) testingGiveRoutineArray{
++ (NSMutableArray *) testingGiveRoutineArray{
     
     NSMutableArray *routine = [NSMutableArray arrayWithCapacity:0];
     

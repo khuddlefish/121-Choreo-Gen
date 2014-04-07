@@ -30,7 +30,7 @@
 
 + (NSMutableArray *)fetchRoutineMoves;
 
--(NSMutableArray *) testingGiveRoutineArray;
++(NSMutableArray *) testingGiveRoutineArray;
 
 - (void)cleanUpDatabaseForQuit;
 

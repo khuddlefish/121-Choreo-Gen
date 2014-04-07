@@ -9,6 +9,7 @@
 #import "ChoreoTableViewController.h"
 #import "choreographyDictionary.h"
 #import "SelectDanceViewController.h"
+#import "Database.h"
 
 @interface ChoreoTableViewController ()
 
@@ -45,13 +46,18 @@
     [choreography setMovesDictionary];                     //sets the dictionary property
     
     //Generates choreography, starting with a basic
-    NSString * previousMove = @"closedBasic";
-    for (int i = 0; i < self.numberOfMoves; ++i) {
-        [self.choreographyItems addObject: previousMove]; //save the sequence
-        previousMove = [choreography chooseAMoveAfter: previousMove];
-    }
+    //NSString * previousMove = @"closedBasic";
+    //for (int i = 0; i < self.numberOfMoves; ++i) {
+    //    [self.choreographyItems addObject: previousMove]; //save the sequence
+    //    previousMove = [choreography chooseAMoveAfter: previousMove];
+    //}
     
 //    [self.tableView reloadData];
+    
+    
+    //Now using database to load choreography.
+    self.choreographyItems = [Database generateRoutine];
+//    self.choreographyItems = [Database testingGiveRoutineArray];
 
 }
 
@@ -134,12 +140,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"ChoreographyPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *choreographyItem = [self.choreographyItems objectAtIndex:indexPath.row];
-    cell.textLabel.text = choreographyItem;
+    DanceMove *temp = [self.choreographyItems objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@", temp.name]];
+    
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@", temp.description]];
     
     return cell;
 }
