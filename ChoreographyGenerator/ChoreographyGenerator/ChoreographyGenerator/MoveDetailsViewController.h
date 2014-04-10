@@ -10,4 +10,10 @@
 
 @interface MoveDetailsViewController : UIViewController
 
+@property IBOutlet UILabel *moveName;
+@property IBOutlet UILabel *moveDescription;
+@property NSString *moveNameString;
+@property NSString *moveDescString;
+
+
 @end

@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "choreographyDictionary.h"
+#import "DanceMove.h"
 
 @interface ChoreoTableViewController : UITableViewController
 
 //declaration for segue
 //- (IBAction)generateDance:(UIStoryboardSegue *)segue;
 
--(void)setGenerationFieldsWithStyle:(NSString *) style andLevel:(NSString *) level andNumberOfMoves: (int) moves;
+
+- (void)setGenerationFieldsWithStyle:(NSString *) style andLevel:(NSString *) level andNumberOfMoves: (int) moves;
 - (void) loadChoreographyData;
 
 @end

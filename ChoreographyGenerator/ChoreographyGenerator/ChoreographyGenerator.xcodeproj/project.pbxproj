@@ -11,6 +11,7 @@
 		1D97C5FA18DBB37500C38A65 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D97C5F918DBB37500C38A65 /* libsqlite3.dylib */; };
 		1D97C5FD18DBB65800C38A65 /* chaChaGold.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D97C5FC18DBB65800C38A65 /* chaChaGold.m */; };
 		1D9A63AF18E4CA2A002A4092 /* DanceMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A63AE18E4CA2A002A4092 /* DanceMove.m */; };
+		1DA1D21B18F3B21A00DB79EB /* MoveDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1D21A18F3B21900DB79EB /* MoveDetailsViewController.m */; };
 		9CFA22C218C03F2F000B273B /* SelectDanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */; };
 		E18A874218BACFD200608548 /* chaChaBronze.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874118BACFD200608548 /* chaChaBronze.m */; };
 		E18A874518BAD7B000608548 /* chaChaSilver.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874418BAD7B000608548 /* chaChaSilver.m */; };
@@ -50,6 +51,8 @@
 		1D97C5FC18DBB65800C38A65 /* chaChaGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chaChaGold.m; sourceTree = "<group>"; };
 		1D9A63AD18E4CA2A002A4092 /* DanceMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DanceMove.h; sourceTree = "<group>"; };
 		1D9A63AE18E4CA2A002A4092 /* DanceMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceMove.m; sourceTree = "<group>"; };
+		1DA1D21918F3B21900DB79EB /* MoveDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveDetailsViewController.h; sourceTree = "<group>"; };
+		1DA1D21A18F3B21900DB79EB /* MoveDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveDetailsViewController.m; sourceTree = "<group>"; };
 		9CFA22C018C03F2F000B273B /* SelectDanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDanceViewController.h; sourceTree = "<group>"; };
 		9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDanceViewController.m; sourceTree = "<group>"; };
 		E18A874018BACFC000608548 /* chaChaBronze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chaChaBronze.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */,
 				E1F45E8E18B8609D00768853 /* ChoreoTableViewController.h */,
 				E1F45E8F18B8609D00768853 /* ChoreoTableViewController.m */,
+				1DA1D21918F3B21900DB79EB /* MoveDetailsViewController.h */,
+				1DA1D21A18F3B21900DB79EB /* MoveDetailsViewController.m */,
 				E1F45E8C18B8609D00768853 /* choreographyDictionary.h */,
 				E1F45E8D18B8609D00768853 /* choreographyDictionary.m */,
 				E18A874018BACFC000608548 /* chaChaBronze.h */,
@@ -239,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Noelle Fa-Kaji";
+				ORGANIZATIONNAME = ChoreoGenProject;
 				TargetAttributes = {
 					E190D7EC18B6887800A83A01 = {
 						TestTargetID = E190D7D118B6887700A83A01;
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA1D21B18F3B21A00DB79EB /* MoveDetailsViewController.m in Sources */,
 				E190D7E618B6887800A83A01 /* AppDelegate.m in Sources */,
 				E1F45E9118B8609D00768853 /* ChoreoTableViewController.m in Sources */,
 				1D97C5F818DBB30C00C38A65 /* Database.m in Sources */,

@@ -26,6 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.moveName setText:self.moveNameString];
+    [self.moveName sizeToFit];
+    
+    [self.moveDescription setText:self.moveDescString];
+    [self.moveDescription sizeToFit];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +41,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//Align label text to top of frame instead of center
+-(void) viewDidLayoutSubviews{
+    [self.moveDescription sizeToFit];
+}
+
 
 /*
 #pragma mark - Navigation

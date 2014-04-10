@@ -10,6 +10,7 @@
 #import "choreographyDictionary.h"
 #import "SelectDanceViewController.h"
 #import "Database.h"
+#import "MoveDetailsViewController.h"
 
 @interface ChoreoTableViewController ()
 
@@ -56,8 +57,8 @@
     
     
     //Now using database to load choreography.
-    self.choreographyItems = [Database generateRoutine];
-//    self.choreographyItems = [Database testingGiveRoutineArray];
+//    self.choreographyItems = [Database generateRoutine];
+    self.choreographyItems = [Database testingGiveRoutineArray];
 
 }
 
@@ -126,15 +127,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1; //Not sure about this
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return [self.choreographyItems count];
 }
 
@@ -146,12 +144,14 @@
     
     // Configure the cell...
     DanceMove *temp = [self.choreographyItems objectAtIndex:indexPath.row];
+   
     [[cell textLabel] setText:[NSString stringWithFormat:@"%@", temp.name]];
     
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@", temp.description]];
     
     return cell;
 }
+
 
 //sets navigation bar to be visible
 - (void)viewWillAppear:(BOOL)animated
@@ -198,16 +198,25 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
+//when a cell is selected, give the dance move details to the details view
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Details"]) {
+
+        //get selected move
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DanceMove *currentDanceMove = [self.choreographyItems objectAtIndex:indexPath.row];
+        
+        //set details view fields
+        MoveDetailsViewController *moveDetVC = segue.destinationViewController;
+        moveDetVC.moveDescString = currentDanceMove.description;
+        moveDetVC.moveNameString = currentDanceMove.name;
+    }
 }
 
- */
+
+
 
 @end
