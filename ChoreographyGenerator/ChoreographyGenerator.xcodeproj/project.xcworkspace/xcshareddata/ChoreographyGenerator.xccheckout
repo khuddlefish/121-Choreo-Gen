@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B373332F-010B-4DAB-AF50-18CF46C37898</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ChoreographyGenerator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>65AB6A2C-57DD-4AC8-969C-19D5483D37EF</key>
+		<string>ssh://github.com/khuddlefish/121-Choreo-Gen.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ChoreographyGenerator/ChoreographyGenerator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>65AB6A2C-57DD-4AC8-969C-19D5483D37EF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/khuddlefish/121-Choreo-Gen.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>65AB6A2C-57DD-4AC8-969C-19D5483D37EF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>65AB6A2C-57DD-4AC8-969C-19D5483D37EF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ChoreoGen</string>
+		</dict>
+	</array>
+</dict>
+</plist>
