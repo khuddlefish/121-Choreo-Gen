@@ -12,6 +12,7 @@
 		1D97C5FD18DBB65800C38A65 /* chaChaGold.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D97C5FC18DBB65800C38A65 /* chaChaGold.m */; };
 		1D9A63AF18E4CA2A002A4092 /* DanceMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A63AE18E4CA2A002A4092 /* DanceMove.m */; };
 		1DA1D21B18F3B21A00DB79EB /* MoveDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1D21A18F3B21900DB79EB /* MoveDetailsViewController.m */; };
+		9CA33A4B18FD0067001BB2F7 /* choreography.db in Resources */ = {isa = PBXBuildFile; fileRef = 9CA33A4A18FD0067001BB2F7 /* choreography.db */; };
 		9CFA22C218C03F2F000B273B /* SelectDanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */; };
 		E18A874218BACFD200608548 /* chaChaBronze.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874118BACFD200608548 /* chaChaBronze.m */; };
 		E18A874518BAD7B000608548 /* chaChaSilver.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A874418BAD7B000608548 /* chaChaSilver.m */; };
@@ -53,6 +54,7 @@
 		1D9A63AE18E4CA2A002A4092 /* DanceMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceMove.m; sourceTree = "<group>"; };
 		1DA1D21918F3B21900DB79EB /* MoveDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveDetailsViewController.h; sourceTree = "<group>"; };
 		1DA1D21A18F3B21900DB79EB /* MoveDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveDetailsViewController.m; sourceTree = "<group>"; };
+		9CA33A4A18FD0067001BB2F7 /* choreography.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = choreography.db; sourceTree = "<group>"; };
 		9CFA22C018C03F2F000B273B /* SelectDanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDanceViewController.h; sourceTree = "<group>"; };
 		9CFA22C118C03F2F000B273B /* SelectDanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDanceViewController.m; sourceTree = "<group>"; };
 		E18A874018BACFC000608548 /* chaChaBronze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chaChaBronze.h; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				1D97C5F618DBB30C00C38A65 /* Database.h */,
 				1D97C5F718DBB30C00C38A65 /* Database.m */,
 				1D9A63AD18E4CA2A002A4092 /* DanceMove.h */,
+				9CA33A4A18FD0067001BB2F7 /* choreography.db */,
 				1D9A63AE18E4CA2A002A4092 /* DanceMove.m */,
 				E1F45E8A18B85DCE00768853 /* Main.storyboard */,
 				E190D7E418B6887800A83A01 /* AppDelegate.h */,
@@ -274,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA33A4B18FD0067001BB2F7 /* choreography.db in Resources */,
 				E1F45E8B18B85DCE00768853 /* Main.storyboard in Resources */,
 				E19AD6D618E4A943000F2E95 /* choreography.sql in Resources */,
 				E190D7E018B6887800A83A01 /* InfoPlist.strings in Resources */,

@@ -2,20 +2,7 @@
 choreography.sql
 
 CS 121
-Name: Noelle Fa-Kaji
-Email: nfakaji9953@scrippscollege.edu
-<<<<<<< HEAD
-=======
-
-To run:
-1. shell> sudo /usr/local/mysql/support-files/mysql.server start
-2. shell> sudo /usr/local/mysql/bin/mysql
-3. mysql> source /Users/Noelle/121-Choreo-Gen/choreography.sql;
-4. mysql> exit
-5. shell> sudo /usr/local/mysql/support-files/mysql.server stop
-
-
->>>>>>> newbranch
+Created by: Noelle Fa-Kaji
 */
 
  -- Setting up the database
@@ -23,7 +10,7 @@ DROP DATABASE IF EXISTS choreographydb;
 
 CREATE DATABASE choreographydb;
 
-GRANT ALL PRIVILEGES ON choreographydb.* to usr@localhost IDENTIFIED BY 'allowme'; 
+--GRANT ALL PRIVILEGES ON choreographydb.* to usr@localhost IDENTIFIED BY 'allowme'; 
 
 USE choreographydb;
 

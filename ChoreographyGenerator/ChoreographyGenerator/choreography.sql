@@ -19,11 +19,10 @@ USE choreographydb;
 
 -- Creating tables
 CREATE TABLE Moves_ChaCha(	
-	move_id TEXT NOT NULL,
+	move_id TEXT NOT NULL PRIMARY KEY,
 	move_name TEXT NOT NULL,
 	move_desc TEXT NOT NULL,
-	UNIQUE (move_name),
-	PRIMARY KEY (move_id)
+	UNIQUE (move_name)
 );
 
 CREATE TABLE Move_Seq_ChaCha(

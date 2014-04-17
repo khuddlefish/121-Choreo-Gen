@@ -87,7 +87,7 @@
     return YES;
 }
 
-
+//This seems to handle all button cases. Is this the only method we need?
 -(void) didPressBronzeButton: (id) sender{
     if (sender==self.bronzeButton) {
         self.selectedLevel = @"Bronze";
