@@ -35,6 +35,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"view loaded");
     [super viewDidLoad];
     self.choreographyItems = [Database database].generateRoutine;
 }

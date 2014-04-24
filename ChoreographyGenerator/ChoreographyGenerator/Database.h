@@ -20,6 +20,7 @@
 @property int selectedNumberOfMoves;
 
 + (Database*)database;
+- (id) initDatabase;
 - (DanceMove*) getMoveInformation: (NSString*) move;
 - (NSArray*)generateRoutine;
 + (NSMutableArray *) testingGiveRoutineArray;

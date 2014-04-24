@@ -41,7 +41,7 @@ static Database *_database;
 - (NSArray *)generateRoutine {
 
 NSMutableArray *routine = [[NSMutableArray alloc] init];
-NSString *query = @"select next_move_id from Moves_Seq_ChaCha where level='Silver' and move_id = 'basicOpen'";
+NSString *query = @"select next_move_id from Move_Seq_ChaCha where level='Silver' and move_id = 'basicOpen'";
 
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil) == SQLITE_OK) {
@@ -54,6 +54,7 @@ NSString *query = @"select next_move_id from Moves_Seq_ChaCha where level='Silve
     }
     else {
         NSLog (@"statement failed");
+        NSLog(@"ERROR: %s", sqlite3_errmsg(_database));
     }
     return routine;
 }
