@@ -5,16 +5,6 @@ CS 121
 Created by: Noelle Fa-Kaji
 */
 
- -- Setting up the database
-DROP DATABASE IF EXISTS choreographydb;
-
-CREATE DATABASE choreographydb;
-
---GRANT ALL PRIVILEGES ON choreographydb.* to usr@localhost IDENTIFIED BY 'allowme'; 
-
-USE choreographydb;
-
-
 -- Creating tables
 CREATE TABLE Moves_ChaCha(	
 	move_id VARCHAR(256) NOT NULL,
@@ -30,8 +20,8 @@ CREATE TABLE Move_Seq_ChaCha(
 	move_id VARCHAR(256) NOT NULL,
 	next_move_id VARCHAR(256) NOT NULL,
 	PRIMARY KEY (preference, level, move_id),
-	FOREIGN KEY (move_id) REFERENCES Moves_ChaCha(move_id),
-	FOREIGN KEY (next_move_id) REFERENCES Moves_ChaCha(move_id)
+	move_id REFERENCES Moves_ChaCha(move_id),
+	next_move_id REFERENCES Moves_ChaCha(move_id)
 );
 
 
@@ -87,11 +77,11 @@ INSERT INTO Moves_ChaCha(move_id, move_name, move_desc) VALUES ("turkishTowel", 
 INSERT INTO Moves_ChaCha(move_id, move_name, move_desc) VALUES ("underarmTurnL", "Underarm Turn Left", ""  );
 INSERT INTO Moves_ChaCha(move_id, move_name, move_desc) VALUES ("underarmTurnR", "Underarm Turn Right", ""  );
 
-<<<<<<< HEAD
+--<<<<<<< HEAD
 
 --Cha Cha Bronze
 =======
->>>>>>> newbranch
+-->>>>>>> newbranch
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (01, "Bronze", "alemana", "shoulderToShoulderL"); 
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (02, "Bronze", "alemana", "basicClosed"); 
 INSERT INTO Move_Seq_ChaCha(preference, level, move_id, next_move_id) VALUES (03, "Bronze", "alemana", "basicOpen"); 

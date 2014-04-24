@@ -4,7 +4,6 @@ choreography.sql
 CS 121
 Name: Noelle Fa-Kaji
 Email: nfakaji9953@scrippscollege.edu
-*/
 
  -- Setting up the database
 DROP DATABASE IF EXISTS choreographydb;
@@ -12,10 +11,10 @@ DROP DATABASE IF EXISTS choreographydb;
 CREATE DATABASE choreographydb;
 
 --not sure about this
-GRANT ALL PRIVILEGES ON choreographydb.* to usr@localhost IDENTIFIED BY 'allowme'; 
+--GRANT ALL PRIVILEGES ON choreographydb.* to usr@localhost IDENTIFIED BY 'allowme';
 
 USE choreographydb;
-
+*/
 
 -- Creating tables
 CREATE TABLE Moves_ChaCha(	

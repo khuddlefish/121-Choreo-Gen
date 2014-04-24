@@ -15,6 +15,12 @@
     sqlite3 *_database;
 }
 
+@property NSString *selectedStyle;
+@property NSString *selectedLevel;
+@property int selectedNumberOfMoves;
+
 + (Database*)database;
-- (NSMutableArray*)generateRoutine;
+- (DanceMove*) getMoveInformation: (NSString*) move;
+- (NSArray*)generateRoutine;
++ (NSMutableArray *) testingGiveRoutineArray;
 @end

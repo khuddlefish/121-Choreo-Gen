@@ -14,82 +14,15 @@
 
 @interface ChoreoTableViewController ()
 
-@property NSMutableArray *choreographyItems;
-
-//planning to move these properties to SelectDanceViewController
-@property NSString *danceStyle;
-@property NSString *difficultyLevel;
-@property int numberOfMoves;
-
 @end
 
 @implementation ChoreoTableViewController
-
-
-//FOR TESTING
-- (void) loadChoreographyData
-{
-    
-//    [self.choreographyItems addObject:@"openBasic"];
-//    [self.choreographyItems addObject:@"spotTurnL"];
-//    [self.choreographyItems addObject:@"openBasic"];
-
-    
-    
-    //For testing -- For the app these should come from actual button presses
-//    self.danceStyle = @"ChaCha";
-//    self.difficultyLevel = @"Bronze";
-//    self.numberOfMoves = 20;
-    
-    choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
-    [choreography setDanceStyle: self.danceStyle];            //sets dance style property
-    [choreography setDifficultyLevel: self.difficultyLevel];  //sets difficulty level property
-    [choreography setMovesDictionary];                     //sets the dictionary property
-    
-    //Generates choreography, starting with a basic
-    //NSString * previousMove = @"closedBasic";
-    //for (int i = 0; i < self.numberOfMoves; ++i) {
-    //    [self.choreographyItems addObject: previousMove]; //save the sequence
-    //    previousMove = [choreography chooseAMoveAfter: previousMove];
-    //}
-    
-//    [self.tableView reloadData];
-    
-    
-    //Now using database to load choreography.
-   //self.choreographyItems = [Database generateRoutine];
-//    self.choreographyItems = [Database testingGiveRoutineArray];
-
-}
-
 
 -(void)setGenerationFieldsWithStyle:(NSString *) style andLevel:(NSString *) level andNumberOfMoves: (int) moves{
     self.danceStyle = style;
     self.difficultyLevel = level;
     self.numberOfMoves = moves;
 }
-
-//method declaration for segue
-/*
-- (IBAction)generateDance:(UIStoryboardSegue *)segue
-{
-    //gets access to view controller that triggered segue
-    SelectDanceViewController *source = [segue sourceViewController];
-    
-    //new choreographyGenerator object
-    choreographyDictionary *choreography = [[choreographyDictionary alloc] init];
-    [choreography setDanceStyle: source.selectedStyle];            //sets dance style property
-    [choreography setDifficultyLevel: source.selectedLevel];  //sets difficulty level property
-    [choreography setMovesDictionary];                     //sets the dictionary property
-    
-    //Generates choreography, starting with a basic
-    NSString * previousMove = @"closedBasic";
-    for (int i = 0; i < source.numMoves; ++i) {
-        [self.choreographyItems addObject: previousMove]; //save the sequence
-        previousMove = [choreography chooseAMoveAfter: previousMove];
-    }
-}
-*/
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -103,24 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // initialize table's data array
-    self.choreographyItems = [[NSMutableArray alloc] init];
-    
-    
-    [self loadChoreographyData];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.choreographyItems = [Database database].generateRoutine;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -140,15 +61,22 @@
 {
     
     static NSString *CellIdentifier = @"ChoreographyPrototypeCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
+    NSString *move = [_choreographyItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = move;
+    
+    /*
     DanceMove *temp = [self.choreographyItems objectAtIndex:indexPath.row];
    
     [[cell textLabel] setText:[NSString stringWithFormat:@"%@", temp.name]];
     
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@", temp.description]];
-    
+    */
     return cell;
 }
 

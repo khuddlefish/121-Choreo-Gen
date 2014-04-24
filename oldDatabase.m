@@ -63,7 +63,6 @@ static sqlite3_stmt *fetchMove;
     
     NSString *currentLevel = [self selectedLevel];
     int count = 0;
-    //[Database schemaCheck];
     
     //get the preference
      NSString *nextMovePreferenceString = [NSString stringWithFormat: @"SELECT COUNT(*) FROM Move_Seq_ChaCha WHERE level=%@ AND move_id=%@", currentLevel, move];
@@ -87,23 +86,6 @@ static sqlite3_stmt *fetchMove;
     return count;
 }
 
-/*
-+ (void) schemaCheck {
-    
-    //get the preference
-    NSString *queryString = @".tables";
-    
-    sqlite3_stmt *statement;
-    if 	(sqlite3_prepare_v2(db, [queryString UTF8String], -1, &statement, nil) == SQLITE_OK) {
-        NSLog(@"queryString");
-            //randomize choosing 1 to count
-    }
-    
-    else {
-        NSLog(@"ERROR: schema failed");
-    }
-}
-*/
 - (NSString*) getMoveAfter: (NSString*) move withPreference: (int) preference {
     
     NSString *currentLevel = [self selectedLevel];

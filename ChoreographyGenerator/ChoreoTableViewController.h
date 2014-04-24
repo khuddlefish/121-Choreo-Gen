@@ -12,11 +12,17 @@
 
 @interface ChoreoTableViewController : UITableViewController
 
+@property (nonatomic, retain) NSArray *choreographyItems;
+
+@property NSString *danceStyle;
+@property NSString *difficultyLevel;
+@property int numberOfMoves;
+
 //declaration for segue
 //- (IBAction)generateDance:(UIStoryboardSegue *)segue;
 
 
 - (void)setGenerationFieldsWithStyle:(NSString *) style andLevel:(NSString *) level andNumberOfMoves: (int) moves;
-- (void) loadChoreographyData;
+//- (void) loadChoreographyData;
 
 @end

@@ -11,10 +11,16 @@
 @implementation DanceMove
 
 //include move id? so can save routine eventually
+@synthesize id, name, description;
+/*
 -(id)initWithId:(NSString *) id andName:(NSString *)name andDescription:(NSString *)description
 {
+    self.id=id;
     self.name = name;
     self.description = description;
     return self;
+    
+    
 }
+ */
 @end
