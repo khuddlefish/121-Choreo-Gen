@@ -40,6 +40,7 @@
     //create list of dance style names for move picker
     self.danceNames = [[NSArray alloc] initWithObjects:@"ChaCha", @"Rumba", @"Samba", nil];
     [_dancePicker selectRow:1 inComponent:0 animated:NO];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,7 +105,6 @@
         
     }
 
-
 }
 
 -(void) didPressSilverButton{
@@ -113,6 +113,28 @@
 -(void) didPressGoldButton{
     self.selectedLevel = @"Gold";
 }
+
+
+//ensuring number of moves is a number
+- (BOOL) textField: (UITextField *)theTextField shouldChangeCharactersInRange:(NSRange)range replacementString: (NSString *)string {
+    
+    // allow backspace
+    if (!string.length)
+    {
+        return YES;
+    }
+    
+    // allow digit 0 to 9
+    if ([string intValue])
+    {
+        return YES;
+    }
+    
+    return NO;
+}
+
+
+
 
 
 //segue to choreo view
