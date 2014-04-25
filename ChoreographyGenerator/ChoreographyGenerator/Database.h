@@ -21,6 +21,8 @@
 
 + (Database*)database;
 - (id) initDatabase;
+
+- (NSString*)getMoveAfter: (NSString*) move withPreference: (int) preference;
 - (DanceMove*) getMoveInformation: (NSString*) move;
 - (NSArray*)generateRoutine;
 + (NSMutableArray *) testingGiveRoutineArray;
