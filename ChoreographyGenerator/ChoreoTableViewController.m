@@ -37,7 +37,12 @@
 {
     NSLog(@"view loaded");
     [super viewDidLoad];
-    self.choreographyItems = [Database database].generateRoutine;
+    Database *DanceDB = [[Database alloc] initDatabase];
+    DanceDB.selectedStyle = self.danceStyle;
+    DanceDB.selectedLevel = self.difficultyLevel;
+    DanceDB.selectedNumberOfMoves = self.numberOfMoves;
+    
+    self.choreographyItems = [DanceDB generateRoutine];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,16 +73,16 @@
     }
     
     // Configure the cell...
-    NSString *move = [_choreographyItems objectAtIndex:indexPath.row];
-    cell.textLabel.text = move;
+    //NSString *move = [_choreographyItems objectAtIndex:indexPath.row];
+    //cell.textLabel.text = move;
     
-    /*
+    
     DanceMove *temp = [self.choreographyItems objectAtIndex:indexPath.row];
    
     [[cell textLabel] setText:[NSString stringWithFormat:@"%@", temp.name]];
     
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@", temp.description]];
-    */
+    
     return cell;
 }
 

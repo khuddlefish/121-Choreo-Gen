@@ -38,6 +38,40 @@ static Database *_database;
     return self;
 }
 
+
+- (int) randomizePreference: (NSString*) move {
+    
+    NSString *currentLevel = [self selectedLevel];
+    int count = 0;
+    int choice = 0;
+    
+    //get the preference
+    NSString *nextMovePreferenceString = [NSString stringWithFormat: @"SELECT COUNT(*) FROM Move_Seq_ChaCha WHERE level='%@' AND move_id='%@'", currentLevel, move];
+    
+    sqlite3_stmt *statement;
+    if 	(sqlite3_prepare_v2(_database, [nextMovePreferenceString UTF8String], -1, &statement, nil) == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            
+            count = sqlite3_column_int(statement, 0);
+            choice = arc4random_uniform(count) + 1;
+            if (choice > count) {
+                NSLog(@"ERROR: Chose an element that is too large");
+                break;
+            }
+        }
+    }
+    
+    else {
+        NSLog(@"ERROR: %s", sqlite3_errmsg(_database));
+        NSLog(@"ERROR: failed to generate preference for next move statement");
+    }
+    
+    sqlite3_finalize(statement);
+    return choice;
+}
+
+
+
 - (NSString*) getMoveAfter: (NSString*) move withPreference: (int) preference {
     
     NSString *nextMoveIDString;
@@ -57,28 +91,62 @@ static Database *_database;
         NSLog(@"ERROR: failed to get next move");
         NSLog(@"ERROR: %s", sqlite3_errmsg(_database));
     }
-    NSLog(nextMoveIDString);
+    
+    //NSLog(@"%@", nextMoveIDString);
     return nextMoveIDString;
 }
 
+
+
+- (DanceMove*) getMoveInformation: (NSString*) move
+{
+    NSString *moveNameString;
+    NSString *moveDescString;
+    DanceMove *moveInfo;
+    
+    //fetch a move's information
+    NSString *fetchMoveString = [NSString stringWithFormat:@"SELECT move_name, move_desc FROM Moves_ChaCha WHERE move_id='%@'", move];
+    
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, [fetchMoveString UTF8String], -1, &statement, nil) == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            char *moveName = (char*) sqlite3_column_text(statement, 0);
+            char *moveDesc = (char*) sqlite3_column_text(statement, 1);
+            moveNameString = [NSString stringWithUTF8String:moveName];
+            moveDescString = [NSString stringWithUTF8String:moveDesc];
+            
+            //create Move object
+            moveInfo = [[DanceMove alloc] initWithId: move andName:moveNameString andDescription:moveDescString];
+            
+        }
+    }
+    
+    else {
+        NSLog(@"ERROR: failed to prepare move fetching statement");
+        NSLog(@"ERROR: %s", sqlite3_errmsg(_database));
+    }
+    
+    sqlite3_finalize(statement);
+    return moveInfo;
+
+}
+
+
+
+
 - (NSArray *)generateRoutine {
-    
-    Database *ChaChaDB = [[Database alloc] initDatabase];
-    
-    //Hard code for testing
-    self.selectedStyle = @"ChaCha";
-    self.selectedLevel = @"Bronze";
-    self.selectedNumberOfMoves = 20;
 
     NSMutableArray *routine = [[NSMutableArray alloc] init];
     
     //Begin with a basic
-    NSString *move = @"basicOpen";
+    NSString *move_id = @"basicOpen";
     
     for (int i=0; i < self.selectedNumberOfMoves; i++) {
+        DanceMove* move = [self getMoveInformation:move_id];
         [routine addObject:move];
-        int pref = 01; //[Database randomizePreference:move]
-        move = [ChaChaDB getMoveAfter:move withPreference:pref];
+        //int pref = 01;
+        int pref = [self randomizePreference:move_id];
+        move_id = [self getMoveAfter:move_id withPreference:pref];
     }
     return routine;
 }

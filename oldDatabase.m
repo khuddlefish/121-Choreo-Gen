@@ -256,4 +256,49 @@ static sqlite3_stmt *fetchMove;
     sqlite3_close(db);
 }
 
+
+
+
+
+
+
+
+
+//Working generate routine
++ (NSArray *)generateRoutine {
+    
+    Database *ChaChaDB = [[Database alloc] initDatabase];
+    
+    //Hard code for testing
+    ChaChaDB.selectedStyle = @"ChaCha";
+    ChaChaDB.selectedLevel = @"Bronze";
+    ChaChaDB.selectedNumberOfMoves = 20;
+    
+    NSMutableArray *routine = [[NSMutableArray alloc] init];
+    
+    //Begin with a basic
+    NSString *move_id = @"basicOpen";
+    
+    for (int i=0; i < ChaChaDB.selectedNumberOfMoves; i++) {
+        DanceMove* move = [ChaChaDB getMoveInformation:move_id];
+        [routine addObject:move];
+        //int pref = 01;
+        int pref = [ChaChaDB randomizePreference:move_id];
+        move_id = [ChaChaDB getMoveAfter:move_id withPreference:pref];
+    }
+    return routine;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

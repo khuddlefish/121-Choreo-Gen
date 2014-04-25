@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChoreographyGenerator/Database.m"
-            timestampString = "418036916.19371"
+            timestampString = "420102333.766881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-getMoveAfter:withPreference:"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "-cleanUpDatabase"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChoreographyGenerator/Database.m"
-            timestampString = "418241120.186818"
+            timestampString = "420102333.766881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-getMoveAfter:withPreference:"
-            landmarkType = "5">
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "@implementation Database"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChoreographyGenerator/Database.m"
-            timestampString = "418241141.016107"
+            timestampString = "420102333.766881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-getMoveAfter:withPreference:"
-            landmarkType = "5">
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "@implementation Database"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChoreographyGenerator/Database.m"
-            timestampString = "418241830.572247"
+            timestampString = "420102333.766881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "-getMoveInformation:"
-            landmarkType = "5">
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "@implementation Database"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
